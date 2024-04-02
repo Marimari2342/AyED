@@ -10,6 +10,10 @@
   
 ***Por último, escriba en el método de clase main el llamado a cada uno de los métodos creados, con valores de ejemplo. En su computadora, ejecute el programa y verifique que se cumple con lo pedido.***
 
+<details><summary> click para ver resolución 🖱</summary>
+
+
+
 ~~~
 package tp1;
 
@@ -72,6 +76,8 @@ public class Numeros {
 }
 
 ~~~
+</details>
+
 
 
 ## Punto 2
