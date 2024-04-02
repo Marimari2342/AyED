@@ -14,7 +14,7 @@
 
 
 
-~~~
+~~~java
 package tp1;
 
 public class Numeros {
@@ -89,7 +89,7 @@ public class Numeros {
 
 <details><summary> <code> click para ver resolución 🖱 </code></summary>
 
-~~~
+~~~java
 package tp1;
 import java.util.Scanner;
 
