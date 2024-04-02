@@ -87,6 +87,8 @@ public class Numeros {
 
 ***Agregue al programa la posibilidad de probar con distintos valores de n ingresandolos por teclado, mediante el uso de System.in. La clase Scanner permite leer de forma sencilla valores de entrada.***
 
+<details><summary> <code> click para ver resolución 🖱 </code></summary>
+
 ~~~
 package tp1;
 import java.util.Scanner;
@@ -115,3 +117,5 @@ public class Numeros {
 }
 
 ~~~
+
+</details>
