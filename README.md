@@ -7,14 +7,15 @@
 * Licenciatura en Sistemas
 * Licenciatura en Informática
 
+
 >[!NOTE]
 >Año de cursada: 2024.
 >
->Acceder al [Programa de la materia](https://drive.google.com/file/d/1JYJnNe9th4DI1P93YNQJrQjiTrjkuXRL/view?usp=sharing).
+>Acceder al Programa de la materia➡️[<code>**AQUÍ**</code>](https://drive.google.com/file/d/1JYJnNe9th4DI1P93YNQJrQjiTrjkuXRL/view?usp=sharing)
 >
->Ver la [Modalidad de Aprobación](https://drive.google.com/file/d/1dqkMP_lXXalliV3bxUp1sLM612Y9dsj1/view?usp=sharing).
+>Ver la Modalidad de Aprobación➡️[<code>**AQUÍ**</code>](https://drive.google.com/file/d/1dqkMP_lXXalliV3bxUp1sLM612Y9dsj1/view?usp=sharing)
 >
->Link al [Tutorial Eclipse](https://drive.google.com/file/d/1CXsoW3KZewtLtZTrjSDyioAjNr6qrzGz/view?usp=sharing).
+>Link al Tutorial Eclipse➡️[<code>**AQUÍ**</code>](https://drive.google.com/file/d/1CXsoW3KZewtLtZTrjSDyioAjNr6qrzGz/view?usp=sharing)
 
 <br>
 <br>
