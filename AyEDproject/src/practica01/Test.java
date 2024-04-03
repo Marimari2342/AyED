@@ -29,8 +29,8 @@ public class Test {
 		estudiante[2].setEmail("manuel@alumno.com");
 		estudiante[2].setDireccion("calle 3");
 		
-		//profesor[0] = new Profesor("","","","","");
-		//profesor[1] = new Profesor("","","","","");
+		profesor[0] = new Profesor("","","","","");
+		profesor[1] = new Profesor("","","","","");
 		
 		profesor[0].setApellido("Perez");
 		profesor[0].setNombre("Juan");
@@ -44,11 +44,11 @@ public class Test {
 		profesor[1].setCatedra("AyED");
 		profesor[1].setFacultad("Informatica");
 		
-		System.out.println("Estudiantes:");
+		
         for(int i=0; i<3;i++){
             System.out.println(estudiante[i].tusDatos());
         }
-        System.out.println("Profesores:");
+        
         for(int i=0; i<2;i++){
             System.out.println(profesor[i].tusDatos());
         }

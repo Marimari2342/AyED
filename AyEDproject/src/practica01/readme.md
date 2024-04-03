@@ -338,11 +338,10 @@ public class Test {
 		profesor[1].setCatedra("AyED");
 		profesor[1].setFacultad("Informatica");
 		
-		System.out.println("Estudiantes:");
         for(int i=0; i<3;i++){
             System.out.println(estudiante[i].tusDatos());
         }
-        System.out.println("Profesores:");
+
         for(int i=0; i<2;i++){
             System.out.println(profesor[i].tusDatos());
         }
