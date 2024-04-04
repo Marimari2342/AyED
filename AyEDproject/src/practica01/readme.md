@@ -386,7 +386,7 @@ public class SwapValores {
     public static void main(String[] args) {
         int a = 1, b = 2;
         Integer c = 3, d = 4;
-        swap1(a, b);        //(paso parámetros por valor)
+        swap1(a, b);        //paso parámetros --> solo se puede por valor
         swap2(c, d);
         System.out.println("a=" + a + " b=" + b);   //a=1 b=2
         System.out.println("c=" + c + " d=" + d);   //c=3 d=4 
@@ -406,6 +406,6 @@ La clase Integer (y también el resto de los wrappers de los tipos primitivos) n
 
 Al insertar un breakpoint en la linea <code>y = tmp</code> y ejecutar en modo debug notamos que los valores que adoptan las variables x, y no coinciden con los valores impresos por consola, esto es porque la clase Integer es inmutable (no permiten que se pueda cambiar el valor que contienen).
 
-![ImagenDebug](/../src/recursos/imagen01.png)
+![ImagenDebug](/../main/recursos/imagen01.png)
 
 </details>
