@@ -409,3 +409,74 @@ Al insertar un breakpoint en la linea <code>y = tmp</code> y ejecutar en modo de
 ![ImagenDebug](/AyEDproject/src/recursos/imagen01.png)
 
 </details>
+
+
+## 🟣 Punto 5
+
+***Dado un arreglo de valores tipo entero se desea calcular el valor máximo, mínimo, y promedio en un único método. Escriba tres métodos de clase, donde respectivamente:***
+
+* ***Devuelva lo pedido por el mecanismo de retorno de un método en Java ("return").***
+
+<details><summary> <code> Respuesta 🖱 </code></summary>
+
+Lo que hago es un método que retorne un arreglo de double con el maximo, el minimo y el promedio. Otra forma podría ser también retornar un String, pero si necesito usar los datos para algo estos estarían dentro del String, entonces no está tan buena esa idea.
+
+El punto a se encuentra en el archivo [Enteros.java](/AyEDproject/src/practica01/Enteros.java).
+
+~~~java
+public static double[] Metodo1(int[] arreglo) {
+    double[] aux = new double[3];
+    aux[0] = -10000; // maximo
+    aux[1] = 10000; // minimo
+    aux[2] = 0; // prom
+    for (int i = 0; i < arreglo.length; i++) {
+        if (arreglo[i] > aux[0]) {
+            aux[0] = arreglo[i];
+        }
+        if (arreglo[i] < aux[1]) {
+            aux[1] = arreglo[i];
+        }
+        aux[2] += arreglo[i];
+    }
+    aux[2] = aux[2] / arreglo.length;
+    return aux;
+}
+~~~
+
+</details>
+
+* ***Devuelva lo pedido interactuando con algún parámetro (el parámetro no puede ser de
+tipo arreglo).***
+
+<details><summary> <code> Respuesta 🖱 </code></summary>
+
+Usamos como parámetro un objeto con tres variables de instacia: max, min y prom.
+
+El punto a se encuentra en el archivo [Enteros.java](/AyEDproject/src/practica01/Enteros.java) y [ObjB.java](/AyEDproject/src/practica01/ObjB.java).
+
+~~~java
+public static void Metodo2(ObjB ob, int []arreglo){
+    ob.setMax(-1);
+    ob.setMin(9999);
+    ob.setProm(0);
+
+    for (int i = 0; i < arreglo.length; i++) {
+        if (arreglo[i] > ob.getMax()) {
+            ob.setMax(arreglo[i]);
+        }
+        if (arreglo[i] < ob.getMin()) {
+            ob.setMin(arreglo[i]);
+        }
+        ob.setProm(ob.getProm() + arreglo[i]);
+    }
+    ob.setProm(ob.getProm() / arreglo.length);
+}
+~~~
+
+</details>
+
+* ***Devuelva lo pedido sin usar parámetros ni la sentencia "return".***
+
+<details><summary> <code> Respuesta 🖱 </code></summary>
+
+</details>
