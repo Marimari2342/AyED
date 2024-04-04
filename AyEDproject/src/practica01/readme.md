@@ -404,7 +404,7 @@ La clase Integer (y también el resto de los wrappers de los tipos primitivos) n
 
 <details><summary> <code> Respuesta 🖱 </code></summary>
 
-Al insertar un breakpoint en la linea <code>y = tmp</code> y ejecutar en modo debug notamos que los valores que adoptan las variables x, y no coinciden con los valores impresos por consola, esto es porque la clase Integer es inmutable (no permiten que se pueda cambiar el valor que contienen).
+Al insertar un breakpoint en la linea <code>y = tmp</code> y ejecutar en modo debug notamos que los valores que adoptan las variables x, y no coinciden con los valores impresos por consola, esto es porque la clase Integer es inmutable (no permite que se pueda cambiar el valor que contiene).
 
 ![ImagenDebug](/AyEDproject/src/recursos/imagen01.png)
 
