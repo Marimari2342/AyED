@@ -421,7 +421,7 @@ Al insertar un breakpoint en la linea <code>y = tmp</code> y ejecutar en modo de
 
 Lo que hago es un método que retorne un arreglo de double con el maximo, el minimo y el promedio. Otra forma podría ser también retornar un String, pero si necesito usar los datos para algo estos estarían dentro del String, entonces no está tan buena esa idea.
 
-El punto a se encuentra en el archivo [Enteros.java](/AyEDproject/src/practica01/Enteros.java).
+El punto **a)** se encuentra en el archivo [Enteros.java](/AyEDproject/src/practica01/Enteros.java).
 
 ~~~java
 public static double[] Metodo1(int[] arreglo) {
@@ -452,7 +452,7 @@ tipo arreglo).***
 
 Usamos como parámetro un objeto con tres variables de instacia: max, min y prom.
 
-El punto a se encuentra en el archivo [Enteros.java](/AyEDproject/src/practica01/Enteros.java) y [ObjB.java](/AyEDproject/src/practica01/ObjB.java).
+El punto **b)** se encuentra en el archivo [Enteros.java](/AyEDproject/src/practica01/Enteros.java) y [ObjB.java](/AyEDproject/src/practica01/ObjB.java).
 
 ~~~java
 public static void Metodo2(ObjB ob, int []arreglo){
