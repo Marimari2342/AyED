@@ -52,6 +52,4 @@ public class Enteros {
         }
         ob.setProm(ob.getProm() / arreglo.length);
     }
-
-    
 }

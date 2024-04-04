@@ -480,3 +480,29 @@ public static void Metodo2(ObjB ob, int []arreglo){
 <details><summary> <code> Respuesta 🖱 </code></summary>
 
 </details>
+
+
+***Análisis de las estructuras de listas provistas por la API de Java.***
+* ***¿En qué casos ArrayList ofrece un mejor rendimiento que LinkedList?***
+
+<details><summary> <code> Respuesta 🖱 </code></summary>
+
+</details>
+
+* ***¿Cuándo LinkedList puede ser más eficiente que ArrayList?***
+
+<details><summary> <code> Respuesta 🖱 </code></summary>
+
+</details>
+
+* ***¿Qué diferencia encuentra en el uso de la memoria en ArrayList y LinkedList?***
+
+<details><summary> <code> Respuesta 🖱 </code></summary>
+
+</details>
+
+* ***¿En qué casos sería preferible usar un ArrayList o un LinkedList?***
+
+<details><summary> <code> Respuesta 🖱 </code></summary>
+
+</details>
