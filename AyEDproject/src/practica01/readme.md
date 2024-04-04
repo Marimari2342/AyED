@@ -356,3 +356,56 @@ public class Test {
 <details><summary> <code> Respuesta 🖱 </code></summary>
 Al ingresar datos con los métodos setters hay un problema, pues cada uno de los valores de los atributos son null, para eso necesito antes utilizar un constructor ingresando datos desde ahí.
 </details>
+
+## Punto 4
+
+***Pasaje de parámetros en Java: sin ejecutar el programa en su computadora, sólo analizándolo, indique qué imprime el siguiente código. Luego, ejecute el ejercicio en su computadora, y compare su resultado con lo esperado en el inciso anterior.***
+
+<details><summary> <code> Respuesta 🖱 </code></summary>
+
+~~~java
+package practica01;
+
+public class SwapValores {
+    public static void swap1 (int x, int y) { //x=1,y=2
+        if (x < y) {        //1<2
+            int tmp = x ;   //tmp=1
+            x = y ;         //x=2
+            y = tmp;        //y=1
+        }
+    }
+
+    public static void swap2 (Integer x, Integer y) {   //x=3,y=4
+        if (x < y) {        //3<4
+            int tmp = x ;   //tmp=3
+            x = y ;         //x=4
+            y = tmp;        //y=3
+        }
+    }
+
+    public static void main(String[] args) {
+        int a = 1, b = 2;
+        Integer c = 3, d = 4;
+        swap1(a, b);        //(paso parámetros por valor)
+        swap2(c, d);
+        System.out.println("a=" + a + " b=" + b);   //a=1 b=2
+        System.out.println("c=" + c + " d=" + d);   //c=3 d=4 
+    }
+}
+~~~
+
+En Java no existe el paso por referencia. El paso por valor es obligatorio.Lo que se almacena en una variable no primitiva no es el objeto en sí sino una dirección o identificador del objeto en el espacio dinámico de memoria. Cuando pasas por parámetros la variable, estás pasando una copia de dicha dirección.
+
+La clase Integer (y también el resto de los wrappers de los tipos primitivos) no permiten que se pueda cambiar el valor que contienen. Por esta característica son clases inmutables.
+
+</details>
+
+***Inserte un breakpoint en las líneas donde se indica: <code>y = tmp</code> y ejecute en modo debug ¿los valores que adoptan las variables x, y coinciden con los valores impresos por consola?***
+
+<details><summary> <code> Respuesta 🖱 </code></summary>
+
+Al insertar un breakpoint en la linea <code>y = tmp</code> y ejecutar en modo debug notamos que los valores que adoptan las variables x, y no coinciden con los valores impresos por consola, esto es porque la clase Integer es inmutable (no permiten que se pueda cambiar el valor que contienen).
+
+![ImagenDebug](/../src/recursos/imagen01.png)
+
+</details>
