@@ -1,7 +1,7 @@
 # AyED - Practica 1
 
 
-## Punto 1
+## 🟣 Punto 1
 ***Escriba tres métodos de clase (static) que reciban por parámetro dos números enteros (tipo int) a y b e impriman todos los números enteros comprendidos entre a; b (inclusive), uno por cada línea en la salida estándar. Para ello, dentro de una nueva clase escriba un método por cada uno de los siguientes incisos:***
 
 * ***Que realice lo pedido con un for.***
@@ -80,7 +80,7 @@ public class Numeros {
 
 
 
-## Punto 2
+## 🟣 Punto 2
 ***Escriba un método de clase que dado un número n devuelva un nuevo arreglo de tamaño n con los n primeros múltiplos enteros de n mayores o iguales que 1.***
 
 * ***Ejemplo: f(5) = [5; 10; 15; 20; 25]; f(k) = {n*k donde k : 1..k}***
@@ -121,7 +121,7 @@ public class Numeros {
 </details>
 
 
-## Punto 3
+## 🟣 Punto 3
 
 ***Creación de instancias mediante el uso del operador new.***
 
@@ -357,7 +357,7 @@ public class Test {
 Al ingresar datos con los métodos setters hay un problema, pues cada uno de los valores de los atributos son null, para eso necesito antes utilizar un constructor ingresando datos desde ahí.
 </details>
 
-## Punto 4
+ ## 🟣 Punto 4 
 
 ***Pasaje de parámetros en Java: sin ejecutar el programa en su computadora, sólo analizándolo, indique qué imprime el siguiente código. Luego, ejecute el ejercicio en su computadora, y compare su resultado con lo esperado en el inciso anterior.***
 
