@@ -481,28 +481,16 @@ public static void Metodo2(ObjB ob, int []arreglo){
 
 </details>
 
+## 🟣 Punto 6
 
-***Análisis de las estructuras de listas provistas por la API de Java.***
-* ***¿En qué casos ArrayList ofrece un mejor rendimiento que LinkedList?***
+***Análisis de las estructuras de listas provistas por la API de Java.¿En qué casos ArrayList ofrece un mejor rendimiento que LinkedList? ¿Cuándo LinkedList puede ser más eficiente que ArrayList? ¿Qué diferencia encuentra en el uso de la memoria en ArrayList y LinkedList? ¿En qué casos sería preferible usar un ArrayList o un LinkedList?***
 
-<details><summary> <code> Respuesta 🖱 </code></summary>
+<details><summary> <code> click para ver resolución 🖱 </code></summary>
 
-</details>
+Internamente, ArrayList se implementa como una matriz ordinaria. Es por eso que insertar un elemento en medio requiere generar un espacio en el arreglo y luego colocar el nuevo elemento en la ranura libre. Obtener y configurar elementos (get, set) es rápido , ya que estas operaciones simplemente abordan el elemento de matriz relevante.
 
-* ***¿Cuándo LinkedList puede ser más eficiente que ArrayList?***
+LinkedList tiene una estructura interna diferente. Se implementa como una lista con elementos interconectados: un conjunto de elementos distintos, cada uno de los cuales almacena referencias a los elementos siguientes y anteriores en la lista. Para insertar un elemento en el medio de dicha lista, solo necesita cambiar las referencias de sus futuros vecinos. Sin embargo, para obtener un elemento debe pasar por todos los anteriores. En otras palabras, las operaciones de obtención y configuración serán lentas.
 
-<details><summary> <code> Respuesta 🖱 </code></summary>
-
-</details>
-
-* ***¿Qué diferencia encuentra en el uso de la memoria en ArrayList y LinkedList?***
-
-<details><summary> <code> Respuesta 🖱 </code></summary>
-
-</details>
-
-* ***¿En qué casos sería preferible usar un ArrayList o un LinkedList?***
-
-<details><summary> <code> Respuesta 🖱 </code></summary>
+Si hay que insertar (o eliminar) elementos con frecuencia en medio de la colección, es mejor usar LinkedList. En todos los demás casos, ArrayList funciona mejor.
 
 </details>
