@@ -31,6 +31,12 @@ public class TestArrayList {
         listaEb.set(0,"Marina Jensen");
         System.out.println("Lista1: " + listaE);
         System.out.println("Lista2: " + listaEb);
+        //punto e)
+        String aux = "Florencia Moreno";
+        if (!listaE.contains(aux)){
+            listaE.add(aux);
+        }
+        System.out.println("Lista1: " + listaE);
     }
 
     //Crear un ArrayList de 3 estudiantes

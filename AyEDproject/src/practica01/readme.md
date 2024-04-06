@@ -615,3 +615,17 @@ public static ArrayList<String> crearLista(){
 Si para crear la lista copia hago <code>ArrayList</String/> listaEb = new ArrayList<>(listaE);</code>, voy a crear una nueva lista y los cambios que realize en una no se veran reflejados en la otra. Ahora si hago <code>ArrayList</String/> listaEb = listaE;</code> en ese caso ambas listas son un mismo objetos y los cambios que hago en una se reflejan en la otra. También se puede usar el método .clone para clonar listas pero no es muy recomendado.
 
 </details>
+
+* ***A la lista del punto 7d, agregue un nuevo estudiante. Antes de agregar, verifique que el estudiante no estaba incluido en la lista.***
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+~~~java
+String aux = "Florencia Moreno";
+if (!listaE.contains(aux)){
+    listaE.add(aux);
+}
+System.out.println("Lista1: " + listaE);
+~~~
+
+</details>
