@@ -658,3 +658,18 @@ public static boolean esCapicua(ArrayList<Integer> l) {
 ~~~
 
 </details>
+
+* ***Considere que se aplica la siguiente función de forma recursiva. A partir de un número n positivo se obtiene una sucesión que termina en 1:***
+
+[ImagenEjemplo](/AyEDproject/src/recursos/imagen02.png)
+
+***Para cualquier n con el que se arranque siempre se llegará al 1. Escriba un programa recursivo que, a partir de un número n, devuelva una lista con cada miembro de la sucesión.***
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+~~~java
+
+~~~
+
+</details>
+
