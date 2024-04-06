@@ -105,6 +105,7 @@ public class Numeros {
 			System.out.print("Arreglo: ");
 			for (int i=0;i<n;i++)
 				System.out.print(arr[i]+" ");
+			s.close();
 
 		}
 	
@@ -522,6 +523,38 @@ public class TestArrayList {
             n = s.nextInt();
         }
         System.out.println("ArrayList: " + lista);
+		s.close();
+    }
+}
+~~~
+
+</details>
+
+* ***Si en lugar de usar un ArrayList en el inciso anterior hubiera usado un LinkedList ¿Qué diferencia encuentra respecto de la implementación? Justifique***
+
+<details><summary> <code> Respuesta 🖱 </code></summary>
+
+No hay mucha diferencia respecto a la implementación, sólo que debo importar **java.util.LinkedList** puesto que trabajo con un LinkedList, y además creo una LinkedList en lugar de una ArrayList. El resto es igual.
+
+~~~java
+package practica01.ejercicio7;
+
+import java.util.LinkedList;    // <-- Importo java.util.LinkedList en lugar de java.util.ArrayList
+import java.util.Scanner; 
+
+public class TextLinkedList {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in) ;
+	    System.out.print("Ingrese un número: ");
+	    int n = s.nextInt();
+        LinkedList<Integer> lista = new LinkedList<>(); // <-- Creo un arreglo LinkedList
+        while (n!=0){
+            lista.add(n);
+            System.out.print("Ingrese otro, para cortar ingrese 0: ");
+            n = s.nextInt();
+        }
+        System.out.println("LinkedList: " + lista);
+        s.close();
     }
 }
 ~~~

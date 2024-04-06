@@ -17,7 +17,7 @@ public class Numeros {
 			System.out.print("Arreglo: ");
 			for (int i=0;i<n;i++)
 				System.out.print(arr[i]+" ");
-
+			s.close();
 		}
 	
 	//Imprimir con for
