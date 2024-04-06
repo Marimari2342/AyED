@@ -586,12 +586,32 @@ for(int i=0;i<lista.size();i++){
 ***d) Modifique algún dato de los estudiantes.***
 
 ***e) Vuelva a imprimir el contenido de la lista original y el contenido de la nueva lista.***
- 
+
 ***¿Qué conclusiones obtiene a partir de lo realizado? ¿Cuántas formas de copiar una lista existen? ¿Qué diferencias existen entre ellas?***
 
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
 
 ~~~java
+//En Main
+ArrayList<String> listaE = crearLista();
+ArrayList<String> listaEb = new ArrayList<>(listaE);
+System.out.println("Lista1: " + listaE);
+System.out.println("Lista2: " + listaEb);
+listaE.set(1,"Sofia Martins");
+listaEb.set(0,"Marina Jensen");
+System.out.println("Lista1: " + listaE);
+System.out.println("Lista2: " + listaEb);
+
+//Crear un ArrayList de 3 estudiantes
+public static ArrayList<String> crearLista(){
+    ArrayList<String> lista = new ArrayList<>();
+    lista.add("Juan Perez");
+    lista.add("Maria Rodriguez");
+    lista.add("Sebastian Paez");
+    return lista;
+}
 ~~~
+
+Si para crear la lista copia hago <code>ArrayList<String> listaEb = new ArrayList<>(listaE);</code>, voy a crear una nueva lista y los cambios que realize en una no se veran reflejados en la otra. Ahora si hago <code>ArrayList<String> listaEb = listaE;</code> en ese caso ambas listas son un mismo objetos y los cambios que hago en una se reflejan en la otra. También se puede usar el método .clone para clonar listas pero no es muy recomendado.
 
 </details>

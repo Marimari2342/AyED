@@ -21,5 +21,27 @@ public class TestArrayList {
             System.out.print(lista.get(i)+" ");
         }
         s.close();
+
+        //punto d)
+        ArrayList<String> listaE = crearLista();
+        ArrayList<String> listaEb = new ArrayList<>(listaE);
+        System.out.println("Lista1: " + listaE);
+        System.out.println("Lista2: " + listaEb);
+        listaE.set(1,"Sofia Martins");
+        listaEb.set(0,"Marina Jensen");
+        System.out.println("Lista1: " + listaE);
+        System.out.println("Lista2: " + listaEb);
     }
+
+    //Crear un ArrayList de 3 estudiantes
+    public static ArrayList<String> crearLista(){
+        ArrayList<String> lista = new ArrayList<>();
+        lista.add("Juan Perez");
+        lista.add("Maria Rodriguez");
+        lista.add("Sebastian Paez");
+        return lista;
+    }
+
+
+
 }
