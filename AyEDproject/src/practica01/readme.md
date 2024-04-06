@@ -494,3 +494,36 @@ LinkedList tiene una estructura interna diferente. Se implementa como una lista 
 Si hay que insertar (o eliminar) elementos con frecuencia en medio de la colección, es mejor usar LinkedList. En todos los demás casos, ArrayList funciona mejor.
 
 </details>
+
+## 🟣 Punto 7
+
+***Uso de las estructuras de listas provistas por la API de Java. Para resolver este punto cree el paquete tp1.ejercicio7.***
+
+* ***Escriba una clase llamada TestArrayList cuyo método main recibe una secuencia de números, los agrega a una lista de tipo ArrayList, y luego de haber agregado todos los números a la lista, imprime el contenido de la misma iterando sobre cada elemento.***
+
+<details><summary> <code> Respuesta 🖱 </code></summary>
+
+~~~java
+package practica01.ejercicio7;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class TestArrayList {
+
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in) ;
+	    System.out.print("Ingrese un número: ");
+	    int n = s.nextInt();
+        ArrayList<Integer> lista = new ArrayList<>();
+        while (n!=0){
+            lista.add(n);
+            System.out.print("Ingrese otro, para cortar ingrese 0: ");
+            n = s.nextInt();
+        }
+        System.out.println("ArrayList: " + lista);
+    }
+}
+~~~
+
+</details>
