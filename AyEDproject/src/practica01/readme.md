@@ -576,11 +576,11 @@ for(int i=0;i<lista.size();i++){
 </details>
 
 * ***Escriba un método que realice las siguientes acciones:***
-1. ***Cree una lista que contenga 3 estudiantes.***
-2. ***Genere una nueva lista que sea una copia de la lista del inciso i.***
-3. ***Imprima el contenido de la lista original y el contenido de la nueva lista.***
-4. ***modifique algún dato de los estudiantes.***
-5. ***vuelva a imprimir el contenido de la lista original y el contenido de la nueva lista.*** 
+***Cree una lista que contenga 3 estudiantes.***
+***Genere una nueva lista que sea una copia de la lista del inciso i.***
+***Imprima el contenido de la lista original y el contenido de la nueva lista.***
+***Modifique algún dato de los estudiantes.***
+***Vuelva a imprimir el contenido de la lista original y el contenido de la nueva lista.*** 
 ***¿Qué conclusiones obtiene a partir de lo realizado? ¿Cuántas formas de copiar una lista existen? ¿Qué diferencias existen entre ellas?***
 
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
