@@ -559,3 +559,16 @@ public class TextLinkedList {
 ~~~
 
 </details>
+
+* ***¿Existen otras alternativas para recorrer los elementos de la lista del punto 7a?***
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+Si, puedo por ejemplo usar un for, que recorra la lista desde 0 hasta su ultimo elemento (consigo la dimensión del ArrayList con **lista.size()**) e imprima cada elemento de la misma.
+
+~~~java
+//punto c)
+for(int i=0;i<lista.size();i++){
+    System.out.print(lista.get(i)+" ");
+}
+~~~

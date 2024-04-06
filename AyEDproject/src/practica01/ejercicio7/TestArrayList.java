@@ -15,6 +15,11 @@ public class TestArrayList {
             n = s.nextInt();
         }
         System.out.println("ArrayList: " + lista);
+
+        //punto c)
+        for(int i=0;i<lista.size();i++){
+            System.out.print(lista.get(i)+" ");
+        }
         s.close();
     }
 }
