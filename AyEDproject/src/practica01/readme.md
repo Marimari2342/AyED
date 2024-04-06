@@ -629,3 +629,32 @@ System.out.println("Lista1: " + listaE);
 ~~~
 
 </details>
+
+* ***Escriba un método que devuelva verdadero o falso si la secuencia almacenada en la lista es o no capicúa:***
+
+~~~java
+public boolean esCapicua(ArrayList<Integer> lista)
+~~~
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+~~~java
+//Main
+System.out.println("Es capicua: " + esCapicua(lista));
+
+// Metodo Capicúa
+public static boolean esCapicua(ArrayList<Integer> l) {
+    boolean aux = true;
+    int n = 0;
+    while (n < l.size() - n - 1 && aux) {
+        if (l.get(n) == l.get(l.size() - n - 1)) {
+            n++;
+        } else {
+            aux = false;
+        }
+    }
+    return aux;
+}
+~~~
+
+</details>
