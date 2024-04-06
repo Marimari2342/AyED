@@ -10,7 +10,7 @@
   
 ***Por último, escriba en el método de clase main el llamado a cada uno de los métodos creados, con valores de ejemplo. En su computadora, ejecute el programa y verifique que se cumple con lo pedido.***
 
-<details><summary> <code> click para ver resolución 🖱 </code></summary>
+<details><summary> <code> click para ver resolución 🖱 </code></summary><br>
 
 
 
@@ -87,7 +87,7 @@ public class Numeros {
 
 ***Agregue al programa la posibilidad de probar con distintos valores de n ingresandolos por teclado, mediante el uso de System.in. La clase Scanner permite leer de forma sencilla valores de entrada.***
 
-<details><summary> <code> click para ver resolución 🖱 </code></summary>
+<details><summary> <code> click para ver resolución 🖱 </code></summary><br>
 
 ~~~java
 package tp1;
@@ -133,7 +133,7 @@ public class Numeros {
 * email
 * direccion
 
-<details><summary> <code> Respuesta 🖱 </code></summary>
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
 
 ~~~java
 package practica01;
@@ -203,7 +203,7 @@ public class Estudiante {
 * catedra
 * facultad
 
-<details><summary> <code> Respuesta 🖱 </code></summary>
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
 
 ~~~java
 package practica01;
@@ -268,7 +268,7 @@ public class Profesor {
 
 ***Agregue un método de instancia llamado tusDatos() en la clase Estudiante y en la clase Profesor, que retorne un String con los datos de los atributos de las mismas. Para acceder a los valores de los atributos utilice los getters previamente definidos.***
 
-<details><summary> <code> Respuesta 🖱 </code></summary>
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
 
 ~~~java
 //Clase Estudiante
@@ -290,7 +290,7 @@ public String tusDatos() {
 
 ***Escriba una clase llamada Test con el método main, el cual cree un arreglo con 2 objetos Estudiante, otro arreglo con 3 objetos Profesor, y luego recorra ambos arreglos imprimiendo los valores obtenidos mediante el método tusDatos(). Recuerde asignar los valores de los atributos de los objetos Estudiante y Profesor invocando los respectivos métodos setters.***
 
-<details><summary> <code> Respuesta 🖱 </code></summary>
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
 
 ~~~java
 package practica01;
@@ -354,7 +354,7 @@ public class Test {
 
 ***Agregue dos breakpoints, uno en la línea donde itera sobre los estudiantes y otro en la línea donde itera sobre los profesores Ejecute la clase Test en modo debug y avance paso a paso visualizando si el estudiante o el profesor recuperado es lo esperado.***
 
-<details><summary> <code> Respuesta 🖱 </code></summary>
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
 Al ingresar datos con los métodos setters hay un problema, pues cada uno de los valores de los atributos son null, para eso necesito antes utilizar un constructor ingresando datos desde ahí.
 </details>
 
@@ -362,7 +362,7 @@ Al ingresar datos con los métodos setters hay un problema, pues cada uno de los
 
 ***Pasaje de parámetros en Java: sin ejecutar el programa en su computadora, sólo analizándolo, indique qué imprime el siguiente código. Luego, ejecute el ejercicio en su computadora, y compare su resultado con lo esperado en el inciso anterior.***
 
-<details><summary> <code> Respuesta 🖱 </code></summary>
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
 
 ~~~java
 package practica01;
@@ -403,7 +403,7 @@ La clase Integer (y también el resto de los wrappers de los tipos primitivos) n
 
 ***Inserte un breakpoint en las líneas donde se indica: <code>y = tmp</code> y ejecute en modo debug ¿los valores que adoptan las variables x, y coinciden con los valores impresos por consola?***
 
-<details><summary> <code> Respuesta 🖱 </code></summary>
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
 
 Al insertar un breakpoint en la linea <code>y = tmp</code> y ejecutar en modo debug notamos que los valores que adoptan las variables x, y no coinciden con los valores impresos por consola, esto es porque la clase Integer es inmutable (no permite que se pueda cambiar el valor que contiene).
 
@@ -418,7 +418,7 @@ Al insertar un breakpoint en la linea <code>y = tmp</code> y ejecutar en modo de
 
 * ***Devuelva lo pedido por el mecanismo de retorno de un método en Java ("return").***
 
-<details><summary> <code> Respuesta 🖱 </code></summary>
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
 
 Lo que hago es un método que retorne un arreglo de double con el maximo, el minimo y el promedio. Otra forma podría ser también retornar un String, pero si necesito usar los datos para algo estos estarían dentro del String, entonces no está tan buena esa idea.
 
@@ -449,7 +449,7 @@ public static double[] Metodo1(int[] arreglo) {
 * ***Devuelva lo pedido interactuando con algún parámetro (el parámetro no puede ser de
 tipo arreglo).***
 
-<details><summary> <code> Respuesta 🖱 </code></summary>
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
 
 Usamos como parámetro un objeto con tres variables de instacia: max, min y prom.
 
@@ -478,7 +478,7 @@ public static void Metodo2(ObjB ob, int []arreglo){
 
 * ***Devuelva lo pedido sin usar parámetros ni la sentencia "return".***
 
-<details><summary> <code> Respuesta 🖱 </code></summary>
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
 
 </details>
 
@@ -486,7 +486,7 @@ public static void Metodo2(ObjB ob, int []arreglo){
 
 ***Análisis de las estructuras de listas provistas por la API de Java.¿En qué casos ArrayList ofrece un mejor rendimiento que LinkedList? ¿Cuándo LinkedList puede ser más eficiente que ArrayList? ¿Qué diferencia encuentra en el uso de la memoria en ArrayList y LinkedList? ¿En qué casos sería preferible usar un ArrayList o un LinkedList?***
 
-<details><summary> <code> click para ver resolución 🖱 </code></summary>
+<details><summary> <code> click para ver resolución 🖱 </code></summary><br>
 
 Internamente, ArrayList se implementa como una matriz ordinaria. Es por eso que insertar un elemento en medio requiere generar un espacio en el arreglo y luego colocar el nuevo elemento en la ranura libre. Obtener y configurar elementos (get, set) es rápido , ya que estas operaciones simplemente abordan el elemento de matriz relevante.
 
@@ -502,7 +502,7 @@ Si hay que insertar (o eliminar) elementos con frecuencia en medio de la colecci
 
 * ***Escriba una clase llamada TestArrayList cuyo método main recibe una secuencia de números, los agrega a una lista de tipo ArrayList, y luego de haber agregado todos los números a la lista, imprime el contenido de la misma iterando sobre cada elemento.***
 
-<details><summary> <code> Respuesta 🖱 </code></summary>
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
 
 ~~~java
 package practica01.ejercicio7;
@@ -511,7 +511,6 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class TestArrayList {
-
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in) ;
 	    System.out.print("Ingrese un número: ");
@@ -532,7 +531,7 @@ public class TestArrayList {
 
 * ***Si en lugar de usar un ArrayList en el inciso anterior hubiera usado un LinkedList ¿Qué diferencia encuentra respecto de la implementación? Justifique***
 
-<details><summary> <code> Respuesta 🖱 </code></summary>
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
 
 No hay mucha diferencia respecto a la implementación, sólo que debo importar **java.util.LinkedList** puesto que trabajo con un LinkedList, y además creo una LinkedList en lugar de una ArrayList. El resto es igual.
 

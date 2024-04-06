@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class TestArrayList {
-
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in) ;
 	    System.out.print("Ingrese un número: ");
