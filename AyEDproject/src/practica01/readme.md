@@ -667,7 +667,7 @@ public static boolean esCapicua(ArrayList<Integer> l) {
 
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
 
-El ejercicio esta resuelto en los archivos [EjercicioSucesio.java](/AyEDproject/src/practica01/ejercicio7/EjercicioSucesion.java) y [Main.java](/AyEDproject/src/practica01/ejercicio7/Main.java).
+El ejercicio esta resuelto en los archivos [EjercicioSucesion.java](/AyEDproject/src/practica01/ejercicio7/EjercicioSucesion.java) y [Main.java](/AyEDproject/src/practica01/ejercicio7/Main.java).
 
 ~~~java
 //Main
@@ -717,3 +717,32 @@ public class EjercicioSucesion {
 
 </details>
 
+* ***Implemente un método recursivo que invierta el orden de los elementos en un ArrayList.***
+
+~~~java
+public void invertirArrayList(ArrayList<Integer> lista)
+~~~
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+</details>
+
+* ***Implemente un método recursivo que calcule la suma de los elementos en un LinkedList.***
+
+~~~java
+public int sumarLinkedList(LinkedList<Integer> lista)
+~~~
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+</details>
+
+* ***Implemente el método “combinarOrdenado” que reciba 2 listas de números ordenados y devuelva una nueva lista también ordenada conteniendo los elementos de las 2 listas.***
+
+~~~java
+public ArrayList<Integer> combinarOrdenado(ArrayList<Integer> l1, ArrayList<Integer> l2);
+~~~
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+</details>
