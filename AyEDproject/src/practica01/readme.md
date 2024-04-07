@@ -786,6 +786,8 @@ public int sumarLinkedList(LinkedList<Integer> lista){
 }
 ~~~
 
+Tener en cuenta que con este método, usando el remove() borro la lista original, por lo tanto, si quiero conservar la lista debería clonarla primero, pues sino la voy a perder.
+
 </details>
 
 * ***Implemente el método “combinarOrdenado” que reciba 2 listas de números ordenados y devuelva una nueva lista también ordenada conteniendo los elementos de las 2 listas.***
