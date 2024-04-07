@@ -719,13 +719,13 @@ public class EjercicioSucesion {
 
 * ***Implemente un método recursivo que invierta el orden de los elementos en un ArrayList.***
 
-El ejercicio esta resuelto en los archivos [ListaEnteros.java](/AyEDproject/src/practica01/ejercicio7/ListaEnteros.java) (en donde creo la clase ListaEnteros con algunas Variables de Instancia, Constructor y otros métodos auxiliares para poder verificar el ejercicio) y [Main.java](/AyEDproject/src/practica01/ejercicio7/Main.java).
-
 ~~~java
 public void invertirArrayList(ArrayList<Integer> lista)
 ~~~
 
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+El ejercicio esta resuelto en los archivos [ListaEnteros.java](/AyEDproject/src/practica01/ejercicio7/ListaEnteros.java) (en donde creo la clase ListaEnteros con algunas Variables de Instancia, Constructor y otros métodos auxiliares para poder verificar el ejercicio) y [Main.java](/AyEDproject/src/practica01/ejercicio7/Main.java).
 
 ~~~java
 
