@@ -15,5 +15,4 @@ public class Main {
         System.out.print("Lista: "+lista);
         s.close();
     }
-
 }

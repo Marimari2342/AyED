@@ -667,8 +667,52 @@ public static boolean esCapicua(ArrayList<Integer> l) {
 
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
 
-~~~java
+El ejercicio esta resuelto en los archivos [EjercicioSucesio.java](/AyEDproject/src/practica01/ejercicio7/EjercicioSucesion.java) y [Main.java](/AyEDproject/src/practica01/ejercicio7/Main.java).
 
+~~~java
+//Main
+public class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        System.out.print("Ingrese un numero entero: ");
+        int n = s.nextInt();
+        List<Integer> lista = new ArrayList<Integer>();
+        EjercicioSucesion e = new EjercicioSucesion();
+        lista = e.calcularSucesion(n);
+        System.out.print("Lista: "+lista);
+        s.close();
+    }
+}
+
+//Class Sucesion
+public class EjercicioSucesion {
+
+    public EjercicioSucesion(){
+
+    }
+
+    public List<Integer> calcularSucesion(int n) {
+        List<Integer> lista = new ArrayList<Integer>();
+        if (n==1){
+            lista.add(n);
+            return lista;
+        }
+        else{
+            if(n%2==0){
+                lista.add(n);
+                n=n/2;
+                lista.addAll(calcularSucesion(n));
+                return lista;
+            }
+            else {
+                lista.add(n);
+                n=3*n+1;
+                lista.addAll(calcularSucesion(n));
+                return lista;
+            }
+        }
+    }
+}
 ~~~
 
 </details>
