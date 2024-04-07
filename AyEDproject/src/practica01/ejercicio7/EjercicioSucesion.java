@@ -5,26 +5,25 @@ import java.util.List;
 
 public class EjercicioSucesion {
 
-    public EjercicioSucesion(){
+    // Constructor
+    public EjercicioSucesion() {
 
     }
 
     public List<Integer> calcularSucesion(int n) {
         List<Integer> lista = new ArrayList<Integer>();
-        if (n==1){
+        if (n == 1) {
             lista.add(n);
             return lista;
-        }
-        else{
-            if(n%2==0){
+        } else {
+            if (n % 2 == 0) {
                 lista.add(n);
-                n=n/2;
+                n = n / 2;
                 lista.addAll(calcularSucesion(n));
                 return lista;
-            }
-            else {
+            } else {
                 lista.add(n);
-                n=3*n+1;
+                n = 3 * n + 1;
                 lista.addAll(calcularSucesion(n));
                 return lista;
             }

@@ -12,7 +12,12 @@ public class Main {
         List<Integer> lista = new ArrayList<Integer>();
         EjercicioSucesion e = new EjercicioSucesion();
         lista = e.calcularSucesion(n);
-        System.out.print("Lista: "+lista);
+        System.out.print("Lista: " + lista + "\n");
+        // Punto h)
+        ArrayList<Integer> lInv = new ArrayList<Integer>();
+        ListaEnteros l = new ListaEnteros(5);
+        System.out.print("Lista Original: " + l.MostrarLista() + "\n");
+        l.invertirArrayList(lInv);
         s.close();
     }
 }
