@@ -1,6 +1,7 @@
 package practica01.ejercicio7;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 public class EjercicioSucesion {
@@ -27,6 +28,18 @@ public class EjercicioSucesion {
                 lista.addAll(calcularSucesion(n));
                 return lista;
             }
+        }
+    }
+
+    public int sumarLinkedList(LinkedList<Integer> lista) {
+        int num = 0;
+        if (lista.size() == 0) {
+            return num;
+        } else {
+            num = lista.get(lista.size() - 1);
+            lista.remove(lista.size() - 1);
+            num += sumarLinkedList(lista);
+            return num;
         }
     }
 }

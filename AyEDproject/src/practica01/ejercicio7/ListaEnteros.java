@@ -23,7 +23,7 @@ public class ListaEnteros {
 
     public void invertirArrayList(ArrayList<Integer> lista) {
         if (tam == 0) {
-            System.out.print("Lista invertida:" + lista);
+            System.out.println("Lista invertida:" + lista);
             tam = l.size();
         } else {
             lista.add(this.l.get(tam - 1));

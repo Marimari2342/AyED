@@ -760,6 +760,32 @@ public int sumarLinkedList(LinkedList<Integer> lista)
 
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
 
+El ejercicio esta resuelto en los archivos [EjercicioSucesion.java](/AyEDproject/src/practica01/ejercicio7/EjercicioSucesion.java) y [Main.java](/AyEDproject/src/practica01/ejercicio7/Main.java).
+
+~~~java
+// Main
+LinkedList <Integer> ll = new LinkedList<>();
+for (int i=0;i<8;i++){
+    ll.add(i+1);
+}
+System.out.println("Lista punto i): "+ll);
+System.out.print("Suma: "+ e.sumarLinkedList(ll));
+
+//Metodo
+public int sumarLinkedList(LinkedList<Integer> lista){
+    int num = 0;
+    if(lista.size()==0){
+        return num;
+    }
+    else{
+        num = lista.get(lista.size()-1);
+        lista.remove(lista.size()-1);
+        num += sumarLinkedList(lista); 
+        return num;
+    }
+}
+~~~
+
 </details>
 
 * ***Implemente el método “combinarOrdenado” que reciba 2 listas de números ordenados y devuelva una nueva lista también ordenada conteniendo los elementos de las 2 listas.***
