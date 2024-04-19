@@ -14,7 +14,21 @@
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
 
 ~~~java
-
+public  int contarHojas() {
+	int hojasizq=0;
+	int hojasder=0;
+	if (this.isLeaf())
+		return 1;		//El arbol no tiene hijos, devuelve 1
+	else if (this.isEmpty())
+		return 0;		//El arbol esta vacio, devuelve 0
+	else {
+		if (this.hasLeftChild())
+			hojasizq = this.getLeftChild().contarHojas();
+		if (this.hasRightChild())
+			hojasder = this.getRightChild().contarHojas();
+	}
+	return hojasder + hojasizq;
+}
 ~~~
 
 </details>
