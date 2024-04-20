@@ -10,5 +10,7 @@ public class Main {
         arbol.getRightChild().addLeftChild(new BinaryTree<>(5));
         
         System.out.println("Contar hojas: "+arbol.contarHojas());
+
+        
     }
 }
