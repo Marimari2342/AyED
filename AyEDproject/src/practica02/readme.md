@@ -96,7 +96,7 @@ Lo probé con el siguiente árbol (cargado en el main):
 ![ImagenArbolEjemplo](/AyEDproject/src/recursos/imagen03.png)
 
 ## 🔵 Punto 3
-***Defina una clase Java denominada ContadorArbol cuya función principal es proveer métodos de validación sobre árboles binarios de enteros. Para ello la clase tiene como variable de instancia un BinaryTree<Integer>. Implemente en dicha clase un método denominado numerosPares() que devuelve en una estructura adecuada (sin ningún criterio de orden) todos los elementos pares del árbol (divisibles por 2).***
+***Defina una clase Java denominada ContadorArbol cuya función principal es proveer métodos de validación sobre árboles binarios de enteros. Para ello la clase tiene como variable de instancia un BinaryTree</Integer/>. Implemente en dicha clase un método denominado numerosPares() que devuelve en una estructura adecuada (sin ningún criterio de orden) todos los elementos pares del árbol (divisibles por 2).***
 
 * ***Implemente el método realizando un recorrido InOrden.***
 * ***Implemente el método realizando un recorrido PostOrden.***
