@@ -103,6 +103,17 @@ public class BinaryTree <T> {
 		return this.getData().toString();
 	}
 
+	//Metodo para visualizar datos del arbol
+	public void imprimir() {
+		if (this != null) {
+			if (this.hasLeftChild())
+				this.getLeftChild().imprimir();
+			System.out.print(this.data + " ");
+			if(this.hasRightChild())
+				this.getRightChild().imprimir();
+		}
+	}
+
 	//Punto 2a)
 	public  int contarHojas() {
 	    int hojasizq=0;
@@ -119,10 +130,15 @@ public class BinaryTree <T> {
 		}
 		return hojasder + hojasizq;
 	}
-		
+	
+	// Punto 2b)
     public BinaryTree<T> espejo(){
-		       		  
- 	   return null;
+		BinaryTree auxEsp = new BinaryTree<>(this.getData());
+		if (this.hasLeftChild())
+			auxEsp.addRightChild(this.getLeftChild().espejo());
+		if (this.hasRightChild())
+			auxEsp.addLeftChild(this.getRightChild().espejo());
+		return auxEsp;
     }
 
 	// 0<=n<=m

@@ -9,8 +9,12 @@ public class Main {
         arbol.addRightChild(new BinaryTree<>(6));
         arbol.getRightChild().addLeftChild(new BinaryTree<>(5));
         
+        arbol.imprimir();
         System.out.println("Contar hojas: "+arbol.contarHojas());
+        BinaryTree arbEsp = new BinaryTree<>(0);
+        arbEsp = arbol.espejo();
+        arbEsp.imprimir();
 
-        
+
     }
 }
