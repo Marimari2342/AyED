@@ -55,4 +55,5 @@ receptor entre los niveles n y m (ambos inclusive). (0 ≤ n < m ≤ altura del 
 </details>
 
 Lo probe con el siguiente arbol (cargado en el main):
+
 ![ImagenArbolEjemplo](/AyEDproject/src/recursos/imagen03.png)
