@@ -14,6 +14,7 @@ public class Main {
         BinaryTree arbEsp = new BinaryTree<>(0);
         arbEsp = arbol.espejo();
         arbEsp.imprimir();
+        arbol.entreNiveles(0, 1);
 
 
     }
