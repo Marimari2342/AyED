@@ -56,7 +56,37 @@ receptor entre los niveles n y m (ambos inclusive). (0 ≤ n < m ≤ altura del 
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
 
 ~~~java
+public void entreNiveles(int n, int m){
+	//verifico que el arbol no este vacío y n y m sean válidos
+	if (this.isEmpty() || n < 0 || m < n) 
+		return;
 
+	Queue<BinaryTree<T>> cola = new LinkedList();
+	cola.add(this);
+	int nivel = 0;
+
+	while (!cola.isEmpty()) {
+		System.out.print("\n");
+		int aux = cola.size();
+		if (nivel >= n && nivel <= m) {
+			System.out.print("Nivel " + nivel+ " --> ");
+			for (int i = 0; i < aux; i++) {
+				BinaryTree<T> nodo = cola.remove();
+				System.out.print(nodo.getData() + " ");
+				if (nodo.hasLeftChild())
+					cola.add(nodo.getLeftChild());
+				if (nodo.hasRightChild())
+					cola.add(nodo.getRightChild());
+			}
+		} 
+		else {
+			for (int i = 0; i < aux; i++) {
+				cola.remove();
+			}
+		}
+		nivel++;
+	}
+}
 ~~~
 
 </details>
