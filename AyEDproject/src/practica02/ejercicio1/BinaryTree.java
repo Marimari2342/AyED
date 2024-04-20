@@ -151,6 +151,7 @@ public class BinaryTree <T> {
 		Queue<BinaryTree<T>> cola = new LinkedList();
 		cola.add(this);
 		int nivel = 0;
+
 		while (!cola.isEmpty()) {
 			System.out.print("\n");
 			int aux = cola.size();
@@ -172,7 +173,6 @@ public class BinaryTree <T> {
 			}
 			nivel++;
 		}
-		
    }
 		
 }
