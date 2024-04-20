@@ -38,7 +38,14 @@ public  int contarHojas() {
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
 
 ~~~java
-
+public BinaryTree<T> espejo(){
+	BinaryTree auxEsp = new BinaryTree<>(this.getData());
+	if (this.hasLeftChild())
+		auxEsp.addRightChild(this.getLeftChild().espejo());
+	if (this.hasRightChild())
+		auxEsp.addLeftChild(this.getRightChild().espejo());
+	return auxEsp;
+}
 ~~~
 
 </details>
