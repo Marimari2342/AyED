@@ -56,4 +56,4 @@ receptor entre los niveles n y m (ambos inclusive). (0 ≤ n < m ≤ altura del 
 
 Lo probe con el siguiente arbol (cargado en el main):
 
-<details>![ImagenArbolEjemplo](/AyEDproject/src/recursos/imagen03.png)</details>
+![ImagenArbolEjemplo](/AyEDproject/src/recursos/imagen03.png)
