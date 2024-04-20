@@ -2,7 +2,7 @@ package practica02.ejercicio1y2;
 
 public class Main {
     public static void main(String[]args){  
-        BinaryTree arbol = new BinaryTree<>(4);
+        BinaryTree<Integer> arbol = new BinaryTree<Integer>(4);
         arbol.addLeftChild(new BinaryTree<>(2));
         arbol.getLeftChild().addLeftChild(new BinaryTree<>(1));
         arbol.getLeftChild().addRightChild(new BinaryTree<>(3));
@@ -11,11 +11,9 @@ public class Main {
         
         arbol.imprimir();
         System.out.println("Contar hojas: "+arbol.contarHojas());
-        BinaryTree arbEsp = new BinaryTree<>(0);
+        BinaryTree<Integer> arbEsp = new BinaryTree<Integer>(0);
         arbEsp = arbol.espejo();
         arbEsp.imprimir();
         arbol.entreNiveles(0, 1);
-
-
     }
 }

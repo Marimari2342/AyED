@@ -134,7 +134,7 @@ public class BinaryTree <T> {
 	
 	// Punto 2b)
     public BinaryTree<T> espejo(){
-		BinaryTree auxEsp = new BinaryTree<>(this.getData());
+		BinaryTree<T> auxEsp = new BinaryTree<T>(this.getData());
 		if (this.hasLeftChild())
 			auxEsp.addRightChild(this.getLeftChild().espejo());
 		if (this.hasRightChild())
@@ -148,7 +148,7 @@ public class BinaryTree <T> {
 		if (this.isEmpty() || n < 0 || m < n) 
 			return;
 
-		Queue<BinaryTree<T>> cola = new LinkedList();
+		Queue<BinaryTree<T>> cola = new LinkedList<>();
 		cola.add(this);
 		int nivel = 0;
 
