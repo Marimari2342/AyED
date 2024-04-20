@@ -12,10 +12,13 @@ public class ContadorArbol {
     public ContadorArbol(BinaryTree <Integer> unArbol){
         arbol=unArbol;
     }
-
-    public LinkedList NumerosPares(){
-        LinkedList lista = new LinkedList<Integer>();
+    //EN PROCESO
+    public LinkedList NumerosParesInOrder(BinaryTree<Integer>arbol){
+        Queue<BinaryTree<Integer>> lista = new LinkedList<>();
+        lista.add(arbol);
         
-        return;
+        return lista;
     }
+
+
 }
