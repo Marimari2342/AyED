@@ -1,8 +1,5 @@
 package practica02.ejercicio3;
-
 import java.util.LinkedList;
-import java.util.Queue;
-
 import practica02.ejercicio1y2.BinaryTree;
 
 public class ContadorArbol {
@@ -30,6 +27,6 @@ public class ContadorArbol {
             NumerosParesInOrder(arbol.getRightChild(), lista);
     }
 
-    //Método para imprimir listas
     
+
 }

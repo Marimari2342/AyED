@@ -1,6 +1,5 @@
 package practica02.ejercicio3;
 import java.util.LinkedList;
-
 import practica02.ejercicio1y2.BinaryTree;
 
 public class Main {
@@ -16,5 +15,9 @@ public class Main {
         ContadorArbol miArbol = new ContadorArbol(arbol);
         LinkedList<Integer> lista = new LinkedList<Integer>();
         lista = miArbol.NumerosParesInOr();
+        
+        System.out.print("\n");
+        System.out.print("Numeros pares InOrder: ");
+        System.out.print(lista);
     }
 }
