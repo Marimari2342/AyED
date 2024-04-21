@@ -147,3 +147,8 @@ private void NumerosParesPostOrder(BinaryTree<Integer> arbol, LinkedList<Integer
 ~~~
 
 </details>
+
+## 🔵 Punto 4
+***Una red binaria es una red que posee una topología de árbol binario lleno. Por ejemplo:***
+
+![RedBinaria](/AyEDproject/src/recursos/imagen04.png)
