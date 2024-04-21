@@ -1,6 +1,5 @@
 package practica01.ejercicio7;
 
-import java.io.Console;
 import java.util.ArrayList;
 
 public class ListaEnteros {
