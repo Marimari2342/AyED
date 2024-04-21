@@ -12,7 +12,7 @@ public class RedBinariaLlena {
 
     public int retardoReenvio() {
         int retardo = 0;
-        if (!arbol.isEmpty())
+        if (!arbol.isEmpty()) //veo que el arbol no este vacio
             retardo = calcularRetardo(arbol);
         return retardo;
     }
