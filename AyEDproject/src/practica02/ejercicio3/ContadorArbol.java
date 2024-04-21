@@ -29,4 +29,7 @@ public class ContadorArbol {
         if (arbol.hasRightChild())
             NumerosParesInOrder(arbol.getRightChild(), lista);
     }
+
+    //Método para imprimir listas
+    
 }
