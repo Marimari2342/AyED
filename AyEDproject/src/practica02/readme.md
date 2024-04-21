@@ -103,7 +103,22 @@ Lo probé con el siguiente árbol (cargado en el main):
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
 
 ~~~java
+// InOrder (se procesa hijo izquierdo - raiz - hijo derecho)
+public LinkedList<Integer> NumerosParesInOr() {
+    LinkedList<Integer> lista = new LinkedList<Integer>();
+    if (!arbol.isEmpty()) // Si tengo elemento en el arbol ejecuto
+        this.NumerosParesInOrder(arbol, lista);
+    return lista;
+}
 
+private void NumerosParesInOrder(BinaryTree<Integer> arbol, LinkedList<Integer> lista) {
+    if (arbol.hasLeftChild())
+        NumerosParesInOrder(arbol.getLeftChild(), lista);
+    if (arbol.getData() % 2 == 0)
+        lista.add(arbol.getData());
+    if (arbol.hasRightChild())
+        NumerosParesInOrder(arbol.getRightChild(), lista);
+}
 ~~~
 
 </details>
