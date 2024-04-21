@@ -1,4 +1,5 @@
 package practica02.ejercicio3;
+
 import java.util.LinkedList;
 import practica02.ejercicio1y2.BinaryTree;
 
@@ -13,11 +14,21 @@ public class Main {
 
         arbol.imprimir();
         ContadorArbol miArbol = new ContadorArbol(arbol);
-        LinkedList<Integer> lista = new LinkedList<Integer>();
-        lista = miArbol.NumerosParesInOr();
-        
+
+        // Punto3 a)
+        LinkedList<Integer> listaInOr = new LinkedList<Integer>();
+        listaInOr = miArbol.NumerosParesInOr();
+
         System.out.print("\n");
         System.out.print("Numeros pares InOrder: ");
-        System.out.print(lista);
+        System.out.print(listaInOr);
+
+        // Punto3 b)
+        LinkedList<Integer> listaPostOr = new LinkedList<Integer>();
+        listaPostOr = miArbol.NumerosParesInOr();
+
+        System.out.print("\n");
+        System.out.print("Numeros pares PostOrder: ");
+        System.out.print(listaPostOr);
     }
 }

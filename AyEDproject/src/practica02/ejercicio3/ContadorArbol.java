@@ -28,5 +28,19 @@ public class ContadorArbol {
     }
 
     // PostOrden (se procesa hijo izquierdo - hijo derecho - raiz)
+    public LinkedList<Integer> NumerosParesPostOr() {
+        LinkedList<Integer> lista = new LinkedList<Integer>();
+        if (!arbol.isEmpty()) // Si tengo elemento en el arbol ejecuto
+            this.NumerosParesPostOrder(arbol, lista);
+        return lista;
+    }
 
+    private void NumerosParesPostOrder(BinaryTree<Integer> arbol, LinkedList<Integer> lista) {
+        if (arbol.hasLeftChild())
+            NumerosParesInOrder(arbol.getLeftChild(), lista);
+        if (arbol.hasRightChild())
+            NumerosParesInOrder(arbol.getRightChild(), lista);
+        if (arbol.getData() % 2 == 0)
+            lista.add(arbol.getData());
+    }
 }
