@@ -10,10 +10,12 @@ public class Main {
         arbol.addRightChild(new BinaryTree<>(6));
         arbol.getRightChild().addLeftChild(new BinaryTree<>(5));
 
+        System.out.print("Arbol sin transformar: ");
         arbol.imprimir();
         System.out.println("");
         Transformacion arbT = new Transformacion(arbol);
         arbT.Suma();
+        System.out.print("Arbol transformado: ");
         arbT.getArbolT().imprimir();
     }
 }
