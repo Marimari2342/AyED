@@ -32,9 +32,9 @@ public class Transformacion {
         return aux+suma;
     }
 
+    //Así llamo al arbol transformado para imprimir resultado
     public BinaryTree<Integer> getArbolT() {
         return arbol;
     }
-
 
 }
