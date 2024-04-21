@@ -162,5 +162,19 @@ segundos.***
 
 * ***Indique qué estrategia (recorrido en profundidad o por niveles) utilizará para resolver el problema.***
 
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+Suponiendo que el dato guardado en cada nodo es el retardo de envío expresado en cantidad de segundos, lo que se me ocurre es realizar un recorrido en profundidad llegando hasta cada hoja y luego comparar cual de todos los caminos es el que retorno un mayor tiempo de retardo posible.
+
+</details>
+
 * ***Cree una clase Java llamada RedBinariaLlena donde implementará lo solicitado en el
 método retardoReenvio():int***
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+~~~java
+
+~~~
+
+</details>
