@@ -174,7 +174,22 @@ método retardoReenvio():int***
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
 
 ~~~java
+public int retardoReenvio() {
+    int retardo = 0;
+    if (!arbol.isEmpty()) //veo que el arbol no este vacio
+        retardo = calcularRetardo(arbol);
+    return retardo;
+}
 
+private int calcularRetardo(BinaryTree<Integer> arbol) {
+    int retL = 0;
+    int retR = 0;
+    if (arbol.hasLeftChild())
+        retL = calcularRetardo(arbol.getLeftChild());
+    if (arbol.hasRightChild())
+        retR = calcularRetardo(arbol.getRightChild());
+    return (Math.max(retL, retR)) + arbol.getData();
+}
 ~~~
 
 </details>
