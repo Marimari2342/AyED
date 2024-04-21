@@ -25,7 +25,7 @@ public class Main {
 
         // Punto3 b)
         LinkedList<Integer> listaPostOr = new LinkedList<Integer>();
-        listaPostOr = miArbol.NumerosParesInOr();
+        listaPostOr = miArbol.NumerosParesPostOr();
 
         System.out.print("\n");
         System.out.print("Numeros pares PostOrder: ");
