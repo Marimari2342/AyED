@@ -18,15 +18,15 @@ public class ProfundidadDeArbolBinario {
     }
 
     private int sumarElementos(BinaryTree<Integer> arbol, int prof, int nivel) {
-        int suma = 0;
         if (prof == nivel)
-            suma = arbol.getData();
+            return arbol.getData();
         else {
+            int suma = 0;
             if (arbol.hasLeftChild())
-                suma = sumarElementos(arbol.getLeftChild(), prof, nivel++);
+                suma += sumarElementos(arbol.getLeftChild(), prof, nivel + 1);
             if (arbol.hasRightChild())
-                suma = sumarElementos(arbol.getRightChild(), prof, nivel++);
+                suma += sumarElementos(arbol.getRightChild(), prof, nivel + 1);
+            return suma + arbol.getData();
         }
-        return suma;
     }
 }
