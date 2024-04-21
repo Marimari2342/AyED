@@ -27,6 +27,6 @@ public class ContadorArbol {
             NumerosParesInOrder(arbol.getRightChild(), lista);
     }
 
-    
+    // PostOrden (se procesa hijo izquierdo - hijo derecho - raiz)
 
 }
