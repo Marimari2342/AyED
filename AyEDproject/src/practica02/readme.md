@@ -259,3 +259,18 @@ private int CalcularSuma(BinaryTree<Integer>arbol){
 ~~~
 
 </details>
+
+## EJERCICIOS DE PARCIALES
+
+***Los siguientes ejercicios fueron tomados en parciales, en los últimos años. Tenga en cuenta que:***
+
+![Informacion](/AyEDproject/src/recursos/imagen06.png)
+
+## 🔵 Punto 7
+***Escribir en una clase ParcialArboles que contenga UNA ÚNICA variable de instancia de tipo BinaryTree de valores enteros NO repetidos y el método público con la siguiente firma: public boolean isLeftTree (int num).***
+
+***El método devuelve true si el subárbol cuya raíz es “num”, tiene en su subárbol izquierdo una cantidad mayor estricta de árboles con un único hijo que en su subárbol derecho, y false en caso contrario. Consideraciones:***
+
+* ***Si “num” no se encuentra en el árbol, devuelve false.***
+
+* ***Si el árbol con raíz “num” no cuenta con una de sus ramas, considere que en esa rama hay -1 árboles con único hijo.***
