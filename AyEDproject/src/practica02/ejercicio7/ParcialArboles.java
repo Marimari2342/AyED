@@ -1,4 +1,3 @@
-//EN PROCESO
 package practica02.ejercicio7;
 
 import practica02.ejercicio1y2.BinaryTree;
