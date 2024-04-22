@@ -24,9 +24,33 @@ public class ParcialArboles {
         }
     }
 
+    private boolean Evaluar(BinaryTree<Integer> arbol){
+        int izq = -1;
+        int der = -1;
+        if (arbol.hasLeftChild())
+            izq = Contar(arbol.getLeftChild());
+        if (arbol.hasRightChild())
+            der = Contar(arbol.getRightChild());
+        return izq > der;
+    }
+
+    private int Contar(BinaryTree<Integer> arbol){
+        int cant=0;
+        if (arbol.hasLeftChild())
+            cant += Contar(arbol.getLeftChild());
+        if (arbol.hasRightChild())
+            cant += Contar(arbol.getRightChild());
+        //Si tengo un unico hijo
+        if ((!arbol.hasLeftChild()&&arbol.hasRightChild())||(arbol.hasLeftChild()&&!arbol.hasRightChild()))
+            cant+=1;
+        return cant;
+    }
+
     public boolean isLeftTree (int num){
         BinaryTree <Integer> arbolRaiz = Buscar(arbol, num); //Busco el arbol con raiz=num
-        
-        return true; //luego evaluo lo que pide el ejercicio (metodo evaluar)
+        if (!arbolRaiz.isEmpty() && Evaluar(arbolRaiz))
+            return true; 
+        else 
+            return false;
     }
 }
