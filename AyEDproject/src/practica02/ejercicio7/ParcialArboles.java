@@ -11,8 +11,22 @@ public class ParcialArboles {
         arbol = unArbol;
     }
 
+    private BinaryTree<Integer> Buscar(BinaryTree<Integer> arbol, int num){
+        if (num == arbol.getData())
+            return arbol;
+        else{
+            BinaryTree <Integer> aux = new BinaryTree<Integer>();
+            if(arbol.hasLeftChild())
+                aux = Buscar(arbol.getLeftChild(), num);
+            if(arbol.hasRightChild()&&aux.isEmpty())
+                aux = Buscar(arbol.getRightChild(), num);
+            return aux;
+        }
+    }
+
     public boolean isLeftTree (int num){
-        //primero busco el nodo que sea igual a num (metodo para buscar) 
+        BinaryTree <Integer> arbolRaiz = Buscar(arbol, num); //Busco el arbol con raiz=num
+        
         return true; //luego evaluo lo que pide el ejercicio (metodo evaluar)
     }
 }
