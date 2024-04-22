@@ -325,7 +325,7 @@ public class ParcialArboles {
         return cant;
     }
 
-    public boolean isLeftTree (int num){
+    public boolean isLeftTree(int num){
         BinaryTree <Integer> arbolRaiz = Buscar(arbol, num); //Busco el arbol con raiz=num
         if (!arbolRaiz.isEmpty() && Evaluar(arbolRaiz))
             return true; 

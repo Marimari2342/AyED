@@ -10,20 +10,20 @@ public class ParcialArboles {
         arbol = unArbol;
     }
 
-    private BinaryTree<Integer> Buscar(BinaryTree<Integer> arbol, int num){
+    private BinaryTree<Integer> Buscar(BinaryTree<Integer> arbol, int num) {
         if (num == arbol.getData())
             return arbol;
-        else{
-            BinaryTree <Integer> aux = new BinaryTree<Integer>();
-            if(arbol.hasLeftChild())
+        else {
+            BinaryTree<Integer> aux = new BinaryTree<Integer>();
+            if (arbol.hasLeftChild())
                 aux = Buscar(arbol.getLeftChild(), num);
-            if(arbol.hasRightChild()&&aux.isEmpty())
+            if (arbol.hasRightChild() && aux.isEmpty())
                 aux = Buscar(arbol.getRightChild(), num);
             return aux;
         }
     }
 
-    private boolean Evaluar(BinaryTree<Integer> arbol){
+    private boolean Evaluar(BinaryTree<Integer> arbol) {
         int izq = -1;
         int der = -1;
         if (arbol.hasLeftChild())
@@ -33,23 +33,23 @@ public class ParcialArboles {
         return izq > der;
     }
 
-    private int Contar(BinaryTree<Integer> arbol){
-        int cant=0;
+    private int Contar(BinaryTree<Integer> arbol) {
+        int cant = 0;
         if (arbol.hasLeftChild())
             cant += Contar(arbol.getLeftChild());
         if (arbol.hasRightChild())
             cant += Contar(arbol.getRightChild());
-        //Si tengo un unico hijo
-        if ((!arbol.hasLeftChild()&&arbol.hasRightChild())||(arbol.hasLeftChild()&&!arbol.hasRightChild()))
-            cant+=1;
+        // Si tengo un unico hijo
+        if ((!arbol.hasLeftChild() && arbol.hasRightChild()) || (arbol.hasLeftChild() && !arbol.hasRightChild()))
+            cant += 1;
         return cant;
     }
 
-    public boolean isLeftTree (int num){
-        BinaryTree <Integer> arbolRaiz = Buscar(arbol, num); //Busco el arbol con raiz=num
+    public boolean isLeftTree(int num) {
+        BinaryTree<Integer> arbolRaiz = Buscar(arbol, num); // Busco el arbol con raiz=num
         if (!arbolRaiz.isEmpty() && Evaluar(arbolRaiz))
-            return true; 
-        else 
+            return true;
+        else
             return false;
     }
 }
