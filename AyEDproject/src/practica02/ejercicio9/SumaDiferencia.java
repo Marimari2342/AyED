@@ -26,4 +26,8 @@ public class SumaDiferencia {
         this.dif = d;
     }
 
+    public String toString() {
+        return "Suma: " + suma + " Diferencia:" + dif;
+    }
+
 }
