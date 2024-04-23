@@ -12,7 +12,14 @@ public class ParcialArboles {
 
     //EN PROCESO
     public boolean esPrefijo(BinaryTree<Integer> arbol1, BinaryTree<Integer> arbol2) {
-        return true;
+        if (arbol1.isEmpty()&&arbol2.isEmpty()) //Los dos arboles están vacios --> son iguales
+            return true;
+        else
+            return evaluar(arbol1,arbol2);
+    }
+
+    private boolean evaluar(BinaryTree<Integer> a1, BinaryTree<Integer> a2) {
+
     }
 
 }
