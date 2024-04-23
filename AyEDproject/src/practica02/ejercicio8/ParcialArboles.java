@@ -4,10 +4,7 @@ import practica02.ejercicio1y2.BinaryTree;
 
 public class ParcialArboles {
 
-    private BinaryTree<Integer> arbol;
-
-    public ParcialArboles(BinaryTree<Integer> unArbol) {
-        arbol = unArbol;
+    public ParcialArboles() {  
     }
 
     public boolean esPrefijo(BinaryTree<Integer> arbol1, BinaryTree<Integer> arbol2) {
