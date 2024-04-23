@@ -16,7 +16,7 @@ public class ParcialArboles {
 
     private boolean evaluar(BinaryTree<Integer> a1, BinaryTree<Integer> a2) {
         if (a1.getData() != a2.getData())
-            return true;
+            return false;
         else {
             boolean aux = true;
             if (a1.hasLeftChild()) {
