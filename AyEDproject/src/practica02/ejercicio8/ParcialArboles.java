@@ -10,7 +10,6 @@ public class ParcialArboles {
         arbol = unArbol;
     }
 
-    // EN PROCESO
     public boolean esPrefijo(BinaryTree<Integer> arbol1, BinaryTree<Integer> arbol2) {
         if (arbol1.isEmpty() && arbol2.isEmpty()) // Los dos arboles están vacios --> son iguales
             return true;
@@ -23,7 +22,19 @@ public class ParcialArboles {
             return true;
         else {
             boolean aux = true;
+            if (a1.hasLeftChild()) {
+                if (a2.hasLeftChild())
+                    aux = aux && evaluar(a1.getLeftChild(), a2.getLeftChild());
+                else
+                    return false;
+            }
+            if (a1.hasRightChild()) {
+                if (a2.hasRightChild())
+                    aux = aux && evaluar(a1.getRightChild(), a2.getRightChild());
+                else
+                    return false;
+            }
+            return aux;
         }
     }
-
 }
