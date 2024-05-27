@@ -2,11 +2,31 @@
 
 ## 🟡 Punto 1
 
-* Resolucion en papel click [<code>AQUÍ</code>](/AyEDproject/src/practica04/Resoluciones/ejercicio01.pdf).
+***Debido a un error en la actualización de sus sistemas, el banco AyED perdió la información del estado de todas sus cuentas. Afortunadamente logran recuperar un backup del día anterior y utilizando las transacciones registradas en las últimas 24hrs podrán reconstruir los saldos. Hay poco tiempo que perder, el sistema bancario debe volver a operar lo antes posible.***
+
+***El equipo de desarrollo se pone manos a la obra y llega a una solución rápidamente (Algoritmo procesarMovimientos). Luego se dan cuenta que es ineficiente y piensan otro algoritmo (procesarMovimientosOptimizado). Ambos algoritmos se encuentran en el archivo Ejercicio 1 - rsq_tn_ayed.zip del material adicional.***
+
+* ***Complete la gráfica para comparar los tiempos de ambos algoritmos.***
+
+* ***¿Por qué procesarMovimientos es tan ineficiente? Tenga en cuenta que pueden existir millones de movimientos diarios que abarquen gran parte de las cuentas bancarias.***
+
+* ***¿En qué se diferencia procesarMovimientosOptimizado? Observe las operaciones que se
+realizan para cada consulta.***
+
+>[!TIP]
+>
+>Resolucion en papel click [<code>AQUÍ</code>](/AyEDproject/src/practica04/Resoluciones/ejercicio01.pdf).
 
 ## 🟡 Punto 2
 
-* Resolucion en papel click [<code>AQUÍ</code>](/AyEDproject/src/practica04/Resoluciones/ejercicio02.pdf).
+***La clase BuscadorEnArrayOrdenado del material adicional (Ejercicio 2 - Tiempo.zip) resuelve el problema de buscar un elemento dentro de un array ordenado. El mismo problema, lo resuelve de dos maneras diferentes: búsqueda lineal y búsqueda dicotómica.
+Se define la variable cantidadElementos, la cual debe ir modificando para determinar una escala (por ejemplo de a 100.000 o 1.000.000, dependiendo de la capacidad de cada equipo) y realice una tabla del tiempo que tardan en ejecutar ambos algoritmos.***
+
+>[!TIP]
+>
+>Resolucion en papel click [<code>AQUÍ</code>](/AyEDproject/src/practica04/Resoluciones/ejercicio02.pdf).
+
+
 
 <p align=center>🟡</p>
 <p align=center>🟡</p>
