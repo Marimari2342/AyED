@@ -42,6 +42,12 @@ Esto se debe a que algunas operaciones requieren un tiempo constante puesto que 
 
 </details>
 
+## 🟡 Punto 4
+
+***Determinar si las siguientes sentencias son verdaderas o falsas, justificando la respuesta utilizando notación Big-Oh.***
+
+![imagen ejercicios](/AyEDproject/src/recursos/imagen09.png)
+
 <p align=center>🟡</p>
 <p align=center>🟡</p>
 <p align=center>🟡</p>
