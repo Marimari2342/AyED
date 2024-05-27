@@ -36,6 +36,10 @@ Se define la variable cantidadElementos, la cual debe ir modificando para determ
 
 ***Explique con sus palabras por qué cree que algunas operaciones se ejecutan en tiempo constante y otras en tiempo lineal.***
 
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+</details>
+
 <p align=center>🟡</p>
 <p align=center>🟡</p>
 <p align=center>🟡</p>
