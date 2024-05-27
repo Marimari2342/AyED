@@ -26,7 +26,15 @@ Se define la variable cantidadElementos, la cual debe ir modificando para determ
 >
 >Resolucion en papel click [<code>AQUÍ</code>](/AyEDproject/src/practica04/Resoluciones/ejercicio02.pdf).
 
+## 🟡 Punto 3
 
+***En la documentación de la clase arrayList que se encuentra en el siguiente [<code>link</code>](https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html) se encuentran las siguientes afirmaciones***
+
+* ***"The size, isEmpty, get, set, iterator, and listIterator operations run in constant time.”***
+
+* ***“All of the other operations run in linear time (roughly speaking)”***
+
+***Explique con sus palabras por qué cree que algunas operaciones se ejecutan en tiempo constante y otras en tiempo lineal.***
 
 <p align=center>🟡</p>
 <p align=center>🟡</p>
