@@ -48,6 +48,16 @@ Esto se debe a que algunas operaciones requieren un tiempo constante puesto que 
 
 ![imagen ejercicios](/AyEDproject/src/recursos/imagen09.png)
 
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+Resolucion en papel --> [<code>PUNTOa)</code>](/AyEDproject/src/practica04/Resoluciones/ejercicio04a.pdf).
+
+Resolucion en papel --> [<code>PUNTOb)</code>](/AyEDproject/src/practica04/Resoluciones/ejercicio04b.pdf).
+
+Resolucion en papel --> [<code>PUNTOc)</code>](/AyEDproject/src/practica04/Resoluciones/ejercicio04c.pdf).
+
+</details>
+
 <p align=center>🟡</p>
 <p align=center>🟡</p>
 <p align=center>🟡</p>
