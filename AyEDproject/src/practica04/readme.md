@@ -4,6 +4,10 @@
 
 * Resolucion en papel click [<code>AQUÍ</code>](/AyEDproject/src/practica04/Resoluciones/ejercicio01.pdf).
 
+## 🟡 Punto 2
+
+* Resolucion en papel click [<code>AQUÍ</code>](/AyEDproject/src/practica04/Resoluciones/ejercicio02.pdf).
+
 <p align=center>🟡</p>
 <p align=center>🟡</p>
 <p align=center>🟡</p>
