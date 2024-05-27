@@ -38,6 +38,8 @@ Se define la variable cantidadElementos, la cual debe ir modificando para determ
 
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
 
+Esto se debe a que algunas operaciones requieren un tiempo constante puesto que por ejemplo sólo consisten en acceder a una variable determinada por ejemplo con get() o set() entonces el tiempo de ejecución no va a variar en este caso. Ahora si por ejemplo necesito iterar sobre una lista para buscar un valor determinado, ahí si voy a tardar un tiempo lineal en llevar a cabo esta operación, esto es el tiempo que tarde en conseguir la variable específica por ejemplo dentro de una lista.
+
 </details>
 
 <p align=center>🟡</p>
