@@ -25,9 +25,11 @@ El nodo C tiene 3 descendientes --> D es la raiz. C pertenece al subarbol derech
 
 Se puede concluir que el subárbol derecho de T es vacío puesto que se cumple
 
+~~~
 PostOrden   --> ......................... R
 
 InOrden     --> (..SubIzq..) R (..SubDer..)
+~~~
 
 Como en PostOrden el último nodo SIEMPRE es la raiz, para que se cumpla el enunciado, el árbol no debería tener subarbol derecho.
 
