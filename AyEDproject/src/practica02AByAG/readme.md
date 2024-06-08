@@ -15,6 +15,12 @@ El nodo C tiene 3 descendientes --> D es la raiz. C pertenece al subarbol derech
 
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
 
+* ARBOL BINARIO LLENO: dado un arbol binario **T** de altura **h**, diremos que **T** es lleno si cada nodo interno tiene grado 2 y todas las hojas están en el mismo nivel. 
+
+* ARBOL BINARIO COMPLETO: dado un arbol binario **T** de altura **h**, diremos que **T** es completo si es lleno de altura **h-1** y el nivel **h** se completa de izquierda a derecha.
+
+No todo arbol binario completo es un arbol lleno, pues un arbol completo puede no tener todas las hojas al mismo nivel, pero todos los arboles binarios llenos son completos, especificamente con todo el nivel h completo. 
+
 </details>
 
 ## 🟠 Punto 3
