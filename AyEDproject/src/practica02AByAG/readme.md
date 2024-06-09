@@ -40,3 +40,20 @@ InOrden     --> (..SubIzq..) R (..SubDer..)
 Como en PostOrden el último nodo SIEMPRE es la raiz, para que se cumpla el enunciado, el árbol no debería tener subarbol derecho.
 
 </details>
+
+
+<p align=center>🟠</p>
+<p align=center>🟠</p>
+<p align=center>🟠</p>
+
+>[!NOTE]
+>
+> * ***Para descargar la practica (del 2024) en PDF, click [<code>AQUÍ</code>](https://drive.google.com/file/d/1Z1ls6fbvRF_Txi7E3y9l3MBjc74iTLvF/view?usp=sharing).***
+
+
+<br>
+<br>
+<br>
+
+
+<p><img align="center" src="https://github.com/Marimari2342/Marimari2342/blob/main/firmagith.png" alt="marigit"/></p>
