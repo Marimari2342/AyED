@@ -98,7 +98,7 @@ La expresión sería la d) --> **(((a-b)/c)+(d*e))**
 Un arbol completo de altura 4 con el mínimo número de nodos sólo tiene 1 nodo en el nivel 4. Lo puedo pensar como la suma de un árbol lleno de nivel 3 más el único nodo del nivel 4, entonces:
 
 ~~~
-Arbol lleno de altura 3 + 1 = 2^(3+1)-1+1 = 2^4 = 16
+Arbol lleno de altura 3 + 1 --> 2^(3+1)-1+1 = 2^4 = 16
 ~~~
 
 </details>
