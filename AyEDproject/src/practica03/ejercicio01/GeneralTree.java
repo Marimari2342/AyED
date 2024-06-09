@@ -1,4 +1,4 @@
-package practica03.ejercicio1;
+package practica03.ejercicio01;
 
 import java.util.LinkedList;
 import java.util.List;
