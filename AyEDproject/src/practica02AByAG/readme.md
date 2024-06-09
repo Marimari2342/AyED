@@ -103,6 +103,44 @@ Arbol lleno de altura 3 + 1 --> 2^(3+1)-1+1 = 2^4 = 16
 
 </details>
 
+## 🟠 Punto 8
+
+***Construya el árbol de expresión correspondiente a la siguiente expresión postfija.***
+
+~~~
+6 5 * 7 3 − 4 8 * + +
+~~~
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+</details>
+
+## 🟠 Punto 9
+
+***Construya el árbol de expresión correspondiente a la siguiente expresión infija.*** 
+
+~~~
+( A + ( B * C ) ) * ( D – E )
+~~~
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+</details>
+
+## 🟠 Punto 10
+
+***Construya el árbol de expresión correspondiente a la siguiente expresión prefija.***
+
+~~~
++ + a e / * - b c d f
+~~~
+
+***¿Cuál es la profundidad del nodo d?***
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+</details>
+
 <p align=center>🟠</p>
 <p align=center>🟠</p>
 <p align=center>🟠</p>
