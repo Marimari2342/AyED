@@ -41,6 +41,27 @@ Como en PostOrden el último nodo SIEMPRE es la raiz, para que se cumpla el enun
 
 </details>
 
+## 🟠 Punto 4
+
+***Se han estudiado los distintos recorridos de un árbol binario. Abajo se muestra un código que combina dos de ellos. ¿Cuál es el resultado si se llama con la raíz del árbol de la figura?***
+
+~~~java
+public void traverse(ArbolBinario<T> a) { 
+    if (!a.esVacio()) {
+        System.out.print(a.getDato()); if (a.tieneHijoIzquierdo())
+        traverse(a.getHijoIzquierdo()); if (a.tieneHijoDerecho())
+        traverse(a.getHijoDerecho()); System.out.print(a.getDato());
+    }
+}
+~~~
+
+![imagen](/AyEDproject/src/recursos/imagen10.png)
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+El programa imprime C - A - B - B - A - E - D - D - F - F - E - C
+
+</details>
 
 <p align=center>🟠</p>
 <p align=center>🟠</p>
