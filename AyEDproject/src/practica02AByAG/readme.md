@@ -63,6 +63,46 @@ El programa imprime C - A - B - B - A - E - D - D - F - F - E - C
 
 </details>
 
+## 🟠 Punto 5
+
+***Evalúe la siguiente expresión postfija y determine cuál es el resultado.***
+
+~~~
+6 5 * 7 3 − 4 8 + * +
+~~~
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+Esta expresión sería --> **(6*5)+(7-3)*(4+8) = 78**
+
+</details>
+
+## 🟠 Punto 6
+
+***Elija la expresión algebraica almacenada en el siguiente árbol:***
+
+![imagen](/AyEDproject/src/recursos/imagen11.png)
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+La expresión sería la d) --> **(((a-b)/c)+(d*e))**
+
+</details>
+
+## 🟠 Punto 7
+
+***¿Cuál es el número mínimo de nodos en un árbol binario completo de altura 4?***
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+Un arbol completo de altura 4 con el mínimo número de nodos sólo tiene 1 nodo en el nivel 4. Lo puedo pensar como la suma de un árbol lleno de nivel 3 más el único nodo del nivel 4, entonces:
+
+~~~
+Arbol lleno de altura 3 + 1 = 2^(3+1)-1+1 = 2^4 = 16
+~~~
+
+</details>
+
 <p align=center>🟠</p>
 <p align=center>🟠</p>
 <p align=center>🟠</p>
