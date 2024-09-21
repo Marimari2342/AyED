@@ -418,7 +418,7 @@ Al insertar un breakpoint en la linea <code>y = tmp</code> y ejecutar en modo de
 
 En este caso retorno un arreglo de double con los valores pedidos.
 
-* metodo1()
+* metodo1( )
 
 ~~~java
 public static double[] metodo1(int[] arreglo){
@@ -484,7 +484,7 @@ public class Resultados {
 }
 ~~~
 
-* metodo2()
+* metodo2( )
 
 ~~~java
 public static void metodo2(int[] arreglo, Resultados resultados){
@@ -513,7 +513,7 @@ public static void metodo2(int[] arreglo, Resultados resultados){
 
 En este caso mi metodo (que no será estático) va a guardar lo pedido en variables dentro de la clase, mediante getters y setters. Luego, si quiero acceder a los resultados, lo haré mediante los getters.
 
-* metodo3()
+* metodo3( )
 
 ~~~java
 
@@ -562,7 +562,7 @@ public class NumerosEnteros {
             if(arreglo[i]<this.getMin()){        //minimo
                 this.setMin(arreglo[i]);
             }
-            aux+=arreglo[i];                    //promedio
+            aux+=arreglo[i];                     //promedio
         }
         this.setProm(aux/arreglo.length);
     }
