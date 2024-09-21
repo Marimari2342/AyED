@@ -55,6 +55,22 @@ public class TestArrayList {
         for (Estudiante estudiante : listaCopia){ //uso un for each más rapido
             System.out.print(estudiante);
         }
+
+        /*Punto (e) --> Agregue un nuevo estudiante. Antes de agregar, verifique
+        que el estudiante no estaba incluido en la lista*/
+        Estudiante estudianteNuevo = new Estudiante("Luana","Roig","B"," "," ");
+        if (!listaEstudiante.contains(estudianteNuevo)){
+            listaEstudiante.add(estudianteNuevo);
+        }
+    }
+
+    public boolean esCapicua(ArrayList<Integer> lista){
+        for (int i = 0; i < lista.size() / 2; i++) { //voy desde 0 hasta la mitad
+            if (!lista.get(i).equals(lista.get(lista.size() - 1 - i))) { //si no son iguales
+                return false; // No es capicúa
+            }
+        }
+        return true; // Es capicúa
     }
 }
 

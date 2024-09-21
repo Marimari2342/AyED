@@ -775,4 +775,40 @@ Referencias compartidas: Al usar el constructor ArrayList, se crea una nueva lis
 
 Inmutabilidad de la copia: Para crear una copia "independiente", donde los cambios en la lista original no afecten a la copia, se necesitaría realizar una copia profunda (deep copy), lo cual implica crear nuevos objetos en lugar de copiar solo las referencias.
 
+----------------------------------
+
+</details>
+
+* ***A la lista del punto 7d, agregue un nuevo estudiante. Antes de agregar, verifique que el estudiante no estaba incluido en la lista.***
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+~~~java
+Estudiante estudianteNuevo = new Estudiante("Luana","Roig","B"," "," ");
+    if (!listaEstudiante.contains(estudianteNuevo)){
+        listaEstudiante.add(estudianteNuevo);
+    }
+~~~
+
+</details>
+
+* ***Escriba un método que devuelva verdadero o falso si la secuencia almacenada en la lista es o no capicúa:***
+
+~~~java
+public boolean esCapicua(ArrayList<Integer> lista)
+~~~
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+~~~java
+public boolean esCapicua(ArrayList<Integer> lista){
+    for (int i = 0; i < lista.size() / 2; i++) { //voy desde 0 hasta la mitad
+        if (!lista.get(i).equals(lista.get(lista.size() -1 -i))) { //si son distintos
+            return false; // No es capicúa
+        }
+    }
+    return true; // Es capicúa
+}
+~~~
+
 </details>
