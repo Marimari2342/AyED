@@ -1101,3 +1101,50 @@ public class TestBalanceo {
 ~~~
 
 </details>
+
+## 🟣 Punto 10
+
+***Considere el siguiente problema: Se quiere modelar la cola de atención en un banco. A medida que la gente llega al banco toma un ticket para ser atendido, sin embargo, de acuerdo a la LEY 14564 de la Provincia de Buenos Aires, se establece la obligatoriedad de otorgar prioridad de atención a mujeres embarazadas, a personas con necesidades especiales o movilidad reducida y a personas mayores de setenta (70) años. De acuerdo a las estructuras de datos vistas en esta práctica, ¿qué estructura de datos sugeriría para el modelado de la cola del banco?***
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+Teniendo en cuenta las estructuras de datos vistas, la mejor opción para modelar la cola de atención en un banco sería utilizar una cola (Queue).
+
+Esto es porque la cola es una estructura de datos que sigue el principio FIFO, lo que es adecuado para un escenario en el que los clientes deben ser atendidos en el orden en que llegaron.
+
+* Manejo de Prioridades: se puede implementar un sistema de prioridad utilizando múltiples colas. Por ejemplo:
+
+1. Una cola para mujeres embarazadas.
+
+2. Una cola para personas con necesidades especiales.
+
+3. Una cola para personas mayores de 70 años.
+
+4. Una cola para los demás clientes.
+
+Luego, al atender clientes, primero se verificaría si hay alguien en las colas prioritarias antes de atender a los demás.
+
+</details>
+
+## 🟣 Punto 11
+
+***Considere el siguiente problema: Se quiere modelar el transporte público de la ciudad de La Plata, lo cual involucra las líneas de colectivos y sus respectivas paradas. Cada línea de colectivos tiene asignado un conjunto de paradas donde se detiene de manera repetida durante un mismo día. De acuerdo a las estructuras de datos vistas en esta práctica, que estructura de datos sugeriría para el modelado de las paradas de una línea de colectivos?***
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+Para modelar las paradas de una línea de colectivos, una estructura de datos adecuada sería un ArrayList o un LinkedList. 
+
+***ArrayList**
+
+* Acceso Rápido: por si necesitas acceder a paradas específicas de manera frecuente, puesto que un ArrayList permite acceso rápido por índice.
+
+* Ordenamiento: como las paradas suelen estar en un orden específico, un ArrayList es útil si el número de paradas no cambia con frecuencia, ya que su tamaño es fijo y permite una gestión más eficiente del almacenamiento.
+
+* Uso de Memoria: los ArrayList tienden a ser más eficientes en términos de memoria si la cantidad de paradas es conocida y relativamente estable.
+
+***LinkedList***
+
+* Inserciones y Eliminaciones: si las paradas se agregan o eliminan con frecuencia, un LinkedList es más eficiente para estas operaciones, ya que no requiere mover otros elementos en la lista.
+
+*Tamaño Dinámico: por si necesito agregar o eliminar paradas sin preocuparme por el tamaño fijo de la lista.
+
+</details>
