@@ -696,3 +696,19 @@ for (int i = 0; i < numeros.size(); i++) {
 ~~~
 
 </details>
+
+* ***¿Existen otras alternativas para recorrer los elementos de la lista del punto 7a?***
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+Si, puedo por ejemplo usar un while, que recorra toda la lista (usando una variable auxiliar) desde 0 hasta su ultimo elemento (consigo la dimensión del ArrayList con **lista.size()**) e imprima cada elemento de la misma.
+
+~~~java
+int i = 0;
+while (i < numeros.size()) {
+    System.out.println(numeros.get(i));
+    i++;
+}
+~~~
+
+</details>
