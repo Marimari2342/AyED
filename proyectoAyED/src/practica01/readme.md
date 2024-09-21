@@ -812,3 +812,95 @@ public boolean esCapicua(ArrayList<Integer> lista){
 ~~~
 
 </details>
+
+* ***Considere que se aplica la siguiente función de forma recursiva. A partir de un número n positivo se obtiene una sucesión que termina en 1:***
+
+![ImagenEjemplo](/proyectoAyED/src/recursos/imagen02.png)
+
+***Para cualquier n con el que se arranque siempre se llegará al 1. Escriba un programa recursivo que, a partir de un número n, devuelva una lista con cada miembro de la sucesión.***
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+~~~java
+package ejercicio7;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class EjercicioSucesion {
+    
+    public static void main(String[] args) {
+        int n = 6;
+        EjercicioSucesion sucesion = new EjercicioSucesion();
+        List<Integer> resultado = sucesion.calcularSucesion(n); //llamo al metodo
+
+        // Imprimo el resultado
+        System.out.println("Sucesión para n = " + n + ": " + resultado);
+    }
+
+    public List<Integer> calcularSucesion(int n) {
+        List<Integer> lista = new ArrayList<>();
+        generarSucesion(n, lista);
+        return lista;
+    }
+
+    private void generarSucesion(int n, List<Integer> lista) {
+        // Agregar el número actual a la lista
+        lista.add(n);
+        // Condición de fin
+        if (n == 1) {
+            return;
+        }
+        // Llamada recursiva según el valor de n
+        if (n % 2 == 0) {                       //si n es par
+            generarSucesion(n / 2, lista);
+        } else {
+            generarSucesion(3 * n + 1, lista);  // n es impar
+        }
+    }
+}
+~~~
+
+</details>
+
+* ***Implemente un método recursivo que invierta el orden de los elementos en un ArrayList.***
+
+~~~java
+public void invertirArrayList(ArrayList<Integer> lista)
+~~~
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+~~~java
+
+~~~
+
+</details>
+
+* ***Implemente un método recursivo que calcule la suma de los elementos en un LinkedList.***
+
+~~~java
+public int sumarLinkedList(LinkedList<Integer> lista)
+~~~
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+~~~java
+
+~~~
+
+</details>
+
+* ***Implemente el método “combinarOrdenado” que reciba 2 listas de números ordenados y devuelva una nueva lista también ordenada conteniendo los elementos de las 2 listas.***
+
+~~~java
+public ArrayList<Integer> combinarOrdenado(ArrayList<Integer> l1, ArrayList<Integer> l2);
+~~~
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+~~~java
+
+~~~
+
+</details>
