@@ -1,3 +1,4 @@
+package practica01;
 /*Punto 3 de la práctica1*/
 public class Estudiante {
     
