@@ -342,3 +342,68 @@ public class Test {
 </details>
 
 ***Agregue dos breakpoints, uno en la línea donde itera sobre los estudiantes y otro en la línea donde itera sobre los profesores Ejecute la clase Test en modo debug y avance paso a paso visualizando si el estudiante o el profesor recuperado es lo esperado.***
+
+ ## 🟣 Punto 4 
+
+***Pasaje de parámetros en Java: sin ejecutar el programa en su computadora, sólo analizándolo, indique qué imprime el siguiente código. Luego, ejecute el ejercicio en su computadora, y compare su resultado con lo esperado en el inciso anterior.***
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+~~~java
+package practica01;
+
+public class SwapValores {
+    public static void swap1 (int x, int y) { //x=1,y=2
+        if (x < y) {        //1<2
+            int tmp = x ;   //tmp=1
+            x = y ;         //x=2
+            y = tmp;        //y=1
+        }
+    }
+
+    public static void swap2 (Integer x, Integer y) {   //x=3,y=4
+        if (x < y) {        //3<4
+            int tmp = x ;   //tmp=3
+            x = y ;         //x=4
+            y = tmp;        //y=3
+        }
+    }
+
+    public static void main(String[] args) {
+        int a = 1, b = 2;
+        Integer c = 3, d = 4;
+        swap1(a, b);        //paso parámetros --> solo se puede por valor
+        swap2(c, d);
+        System.out.println("a=" + a + " b=" + b);   //a=1 b=2
+        System.out.println("c=" + c + " d=" + d);   //c=3 d=4 
+    }
+}
+~~~
+
+Analizando por caso:
+
+* **Método swap1(int x, int y):**
+
+Este método toma dos enteros primitivos (int) como parámetros. Sin embargo, en Java, los parámetros se pasan por valor, lo que significa que cualquier cambio en los valores dentro del método no afectará a las variables originales. Dentro de <code>swap1</code>, si x < y, los valores se intercambian, pero solo los valores locales en el contexto del método, no las variables originales fuera de este. En el método <code>main</code>, los valores a = 1 y b = 2 son pasados a <code>swap1</code>. Como 1 < 2, dentro del método los valores de x y y se intercambian, pero eso no afecta a las variables en el main.
+
+* **Método swap2(Integer x, Integer y):**
+
+Este método toma dos objetos Integer (clase envolvente de int). Aunque Java pasa objetos por referencia, en este caso también se comporta como si se pasaran por valor debido a la **inmutabilidad** de los objetos Integer. Es decir, las referencias originales no cambian fuera del método. En el <code>main</code>, los valores c = 3 y d = 4 son pasados a <code>swap2</code>. Como 3 < 4, dentro del método los valores de x y y se intercambian, pero no afecta a c y d en el <code>main</code>.
+
+-----------------------------------
+
+En conclusión, en Java no existe el paso por referencia. El paso por valor es obligatorio.Lo que se almacena en una variable no primitiva no es el objeto en sí sino una dirección o identificador del objeto en el espacio dinámico de memoria. Cuando pasas por parámetros la variable, estás pasando una copia de dicha dirección.
+
+La clase Integer (y también el resto de los wrappers de los tipos primitivos) no permiten que se pueda cambiar el valor que contienen. Por esta característica son clases inmutables.
+
+</details>
+
+***Inserte un breakpoint en las líneas donde se indica: <code>y = tmp</code> y ejecute en modo debug ¿los valores que adoptan las variables x, y coinciden con los valores impresos por consola?***
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+Al insertar un breakpoint en la linea <code>y = tmp</code> y ejecutar en modo debug notamos que los valores que adoptan las variables x, y no coinciden con los valores impresos por consola, esto es porque la clase Integer es inmutable (no permite que se pueda cambiar el valor que contiene).
+
+![ImagenDebug](/proyectoAyED/src/recursos/imagen01.png)
+
+</details>
