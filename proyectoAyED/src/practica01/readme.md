@@ -1145,6 +1145,6 @@ Para modelar las paradas de una línea de colectivos, una estructura de datos ad
 
 * Inserciones y Eliminaciones: si las paradas se agregan o eliminan con frecuencia, un LinkedList es más eficiente para estas operaciones, ya que no requiere mover otros elementos en la lista.
 
-*Tamaño Dinámico: por si necesito agregar o eliminar paradas sin preocuparme por el tamaño fijo de la lista.
+* Tamaño Dinámico: por si necesito agregar o eliminar paradas sin preocuparme por el tamaño fijo de la lista.
 
 </details>
