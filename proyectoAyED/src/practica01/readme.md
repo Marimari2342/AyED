@@ -418,6 +418,8 @@ Al insertar un breakpoint en la linea <code>y = tmp</code> y ejecutar en modo de
 
 En este caso retorno un arreglo de double con los valores pedidos.
 
+* metodo1
+
 ~~~java
 public static double[] metodo1(int[] arreglo){
     double[] aux = new double[3];
@@ -444,8 +446,63 @@ public static double[] metodo1(int[] arreglo){
 
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
 
-~~~java
+En este caso, no puedo usar un arreglo como parámetro, pero puedo utilizar un objeto de una clase auxiliar que voy a llamar Resultados para almacenar los valores de máximo, mínimo y promedio.
 
+Resultados.java
+
+~~~java
+public class Resultados {
+    private int maximo;
+    private int minimo;
+    private double promedio;
+
+    //getters
+    public int getMax(){
+        return this.maximo;
+    }
+
+    public int getMin(){
+        return this.minimo;
+    }
+
+    public double getProm(){
+        return this.promedio;
+    }
+    
+    //setters
+    public void setMax(int num){
+        this.maximo=num;
+    }
+
+    public void setMin(int num){
+        this.minimo=num;
+    }
+
+    public void setProm(double num){
+        this.promedio=num;
+    }
+}
+~~~
+
+*metodo2
+
+~~~java
+public static void metodo2(int[] arreglo, Resultados resultados){
+    resultados.setMax(arreglo[0]);
+    resultados.setMin(arreglo[0]);
+    resultados.setProm(0);
+    int aux=0;
+    for (int i=0;i<arreglo.length;i++){
+        if(arreglo[i]>resultados.getMax()){     //maximo
+            resultados.setMax(arreglo[i]);
+        }
+        if(arreglo[i]<resultados.getMin()){     //minimo
+            resultados.setMin(arreglo[i]);
+        }
+        aux+=arreglo[i];                        //promedio
+    }
+    resultados.setProm(aux/arreglo.length);
+}
 ~~~
 
 </details>

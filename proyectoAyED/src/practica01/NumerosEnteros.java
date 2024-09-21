@@ -1,6 +1,4 @@
 
-import java.lang.reflect.Array;
-
 /*Punto 5 de la práctica1*/
 public class NumerosEnteros {
     
@@ -22,7 +20,22 @@ public class NumerosEnteros {
         return aux;
     }
     
-
+    public static void metodo2(int[] arreglo, Resultados resultados){
+        resultados.setMax(arreglo[0]);
+        resultados.setMin(arreglo[0]);
+        resultados.setProm(0);
+        int aux=0;
+        for (int i=0;i<arreglo.length;i++){
+            if(arreglo[i]>resultados.getMax()){     //maximo
+                resultados.setMax(arreglo[i]);
+            }
+            if(arreglo[i]<resultados.getMin()){     //minimo
+                resultados.setMin(arreglo[i]);
+            }
+            aux+=arreglo[i];                        //promedio
+        }
+        resultados.setProm(aux/arreglo.length);
+    }
 }
 
 
