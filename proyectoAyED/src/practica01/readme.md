@@ -511,8 +511,59 @@ public static void metodo2(int[] arreglo, Resultados resultados){
 
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
 
-~~~java
+En este caso mi metodo (que no será estático) va a guardar lo pedido en variables dentro de la clase, mediante getters y setters. Luego, si quiero acceder a los resultados, lo haré mediante los getters.
 
+~~~java
+public class NumerosEnteros {
+    
+    /*Usamos atributos, getters y setters para el metodo3*/
+    private int maximo;
+    private int minimo;
+    private double promedio;
+
+    //getters
+    public int getMax(){
+        return this.maximo;
+    }
+
+    public int getMin(){
+        return this.minimo;
+    }
+
+    public double getProm(){
+        return this.promedio;
+    }
+    
+    //setters
+    public void setMax(int num){
+        this.maximo=num;
+    }
+
+    public void setMin(int num){
+        this.minimo=num;
+    }
+
+    public void setProm(double num){
+        this.promedio=num;
+    }
+
+    public void metodo3(int[] arreglo){
+        this.setMax(arreglo[0]);
+        this.setMin(arreglo[0]);
+        this.setProm(0);
+        int aux=0;
+        for (int i=0;i<arreglo.length;i++){
+            if(arreglo[i]>this.getMax()){        //maximo
+                this.setMax(arreglo[i]);
+            }
+            if(arreglo[i]<this.getMin()){        //minimo
+                this.setMin(arreglo[i]);
+            }
+            aux+=arreglo[i];                    //promedio
+        }
+        this.setProm(aux/arreglo.length);
+    }
+}
 ~~~
 
 </details>
