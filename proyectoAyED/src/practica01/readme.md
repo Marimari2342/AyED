@@ -972,33 +972,32 @@ public ArrayList<Integer> combinarOrdenado(ArrayList<Integer> l1, ArrayList<Inte
 
 ***El objetivo de este punto es ejercitar el uso de la API de listas de Java y aplicar conceptos de la programación orientada a objetos. Sean las siguientes especificaciones de cola, cola circular y cola con 2 extremos disponibles, vistas en la explicación teórica:***
 
-* Implemente en JAVA la clase Queue de acuerdo con la especificación dada en el diagrama de clases. Defina esta clase dentro del paquete tp1.ejercicio8.
+* ***Implemente en JAVA la clase Queue de acuerdo con la especificación dada en el diagrama de clases. Defina esta clase dentro del paquete tp1.ejercicio8.***
 
-1. Queue() Constructor de la clase.
+***1. Queue() Constructor de la clase.***
 
-2. enqueue(dato: T): Inserta el elemento al final de la cola.
+***2. enqueue(dato: T): Inserta el elemento al final de la cola.***
 
-3. dequeue():T Elimina el elemento del frente de la cola y lo retorna. Si la cola está vacía se produce un error.
+***3. dequeue():T Elimina el elemento del frente de la cola y lo retorna. Si la cola está vacía se produce un error.***
 
-4. head(): T Retorna el elemento del frente de la cola. Si la cola está vacía se
-produce un error.
+***4. head(): T Retorna el elemento del frente de la cola. Si la cola está vacía se
+produce un error.***
 
-5.isEmpty(): boolean Retorna verdadero si la cola no tiene elementos y falso en
-caso contrario.
+***5.isEmpty(): boolean Retorna verdadero si la cola no tiene elementos y falso en
+caso contrario.***
 
-6. size():int Retorna la cantidad de elementos de la cola.
+***6. size():int Retorna la cantidad de elementos de la cola.***
 
-7. toString(): String Retorna los elementos de la cola en un String.
+***7. toString(): String Retorna los elementos de la cola en un String.***
 
-* Implemente en JAVA las clase CircularQueue de acuerdo con la especificación dada en el diagrama de clases. Defina esta clase dentro del paquete tp1.ejercicio8.
+* ***Implemente en JAVA las clase CircularQueue de acuerdo con la especificación dada en el diagrama de clases. Defina esta clase dentro del paquete tp1.ejercicio8.***
 
-1 shift(): T Permite rotar los elementos, haciéndolo circular. Retorna el elemento
-encolado.
+***1 shift(): T Permite rotar los elementos, haciéndolo circular. Retorna el elemento encolado.***
 
-* Implemente en JAVA la clase DoubleEndedQueue de acuerdo con la especificación
-dada en el diagrama de clases. Defina esta clase dentro del paquete tp1.ejercicio8.
+* ***Implemente en JAVA la clase DoubleEndedQueue de acuerdo con la especificación
+dada en el diagrama de clases. Defina esta clase dentro del paquete tp1.ejercicio8.***
 
-1. enqueueFirst():void Permite encolar al inicio.
+***1. enqueueFirst():void Permite encolar al inicio.***
 
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
 
@@ -1014,3 +1013,28 @@ La resolución de los ejercicios esta en la carpeta **ejercicio8**
 
 </details>
 
+## 🟣 Punto 8
+
+***Considere un string de caracteres S, el cual comprende únicamente los caracteres: (,),[,],{,}. Decimos que S está balanceado si tiene alguna de las siguientes formas:***
+
+~~~
+S = "" S es el string de longitud cero.
+S = "(T)"
+S = "[T]"
+S = "{T}"
+S = "TU"
+~~~
+
+***Donde ambos T y U son strings balanceados. Por ejemplo, "{( ) [ ( ) ] }" está balanceado, pero "( [ ) ]" no lo está.***
+
+* ***a. Indique qué estructura de datos utilizará para resolver este problema y cómo la utilizará.***
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+</details>
+
+* ***b. Implemente una clase llamada tp1.ejercicio9.TestBalanceo, cuyo objetivo es determinar si un String dado está balanceado. El String a verificar es un parámetro de entrada (no es un dato predefinido).***
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+</details>
