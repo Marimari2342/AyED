@@ -1,6 +1,7 @@
 package ejercicio7;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 
 public class TestArrayList {
     public static void main(String[] args) {
@@ -92,6 +93,60 @@ public class TestArrayList {
         lista.set(lista.size() - 1 - aux, elem); //rescribo en pos contraria a aux
         // Llamada recursiva con el siguiente índice
         invertirRecursivo(lista, aux + 1);
+    }
+
+    /*(i)Implemente un método recursivo que calcule la suma de los elementos en 
+    un LinkedList. */
+    public int sumarLinkedList(LinkedList<Integer> lista){
+        // Llamada recursiva para calcular la suma        
+        return sumarRecursivo(lista);
+    }
+
+    private static int sumarRecursivo(LinkedList<Integer> lista){
+        //condicion de corte
+        if(lista.isEmpty()){
+            return 0;
+        }
+        //suma recursiva
+        int suma=lista.get(0);
+        lista.remove(0);
+        return suma + sumarRecursivo(lista);
+    }
+
+    /*(j) Implemente el método “combinarOrdenado” que reciba 2 listas de números 
+    ordenados y devuelva una nueva lista también ordenada conteniendo los elementos 
+    de las 2 listas.*/
+    public ArrayList<Integer> combinarOrdenado(ArrayList<Integer> l1, ArrayList<Integer> l2){
+        // Lista para almacenar el resultado
+        ArrayList<Integer> listaCombinada = new ArrayList<>(); 
+        int i = 0, j = 0;
+        // Recorrer ambas listas hasta que una se quede sin elementos
+        while (i < l1.size() && j < l2.size()) { //mientras no llego al final de alguna lista
+            if (l1.get(i) <= l2.get(j)) { 
+                listaCombinada.add(l1.get(i)); // Agregar el menor de los dos
+                i++; // Avanzar el puntero de la primera lista
+            } else {
+                listaCombinada.add(l2.get(j)); // Agregar el menor de los dos
+                j++; // Avanzar el puntero de la segunda lista
+            }
+        }
+        /*Acá sali del while, eso significa que al menos una de las dos listas
+         * la recorri completa. Por lo tanto, agrego los elementos restantes de
+         * la lista que aun tenga elementos (si es que tiene). A lo sumo entra a
+         * UNO de los bucles while de abajo.
+        */
+        // Agregar los elementos restantes de l1 (si los hay)
+        while (i < l1.size()) {
+            listaCombinada.add(l1.get(i));
+            i++;
+        }
+        // Agregar los elementos restantes de l2 (si los hay)
+        while (j < l2.size()) {
+            listaCombinada.add(l2.get(j));
+            j++;
+        }
+        //retorno la lista combinada
+        return listaCombinada;
     }
 }
 
