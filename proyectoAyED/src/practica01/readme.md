@@ -100,3 +100,187 @@ public class Main {
 ~~~
 
 </details>
+
+## 🟣 Punto 3
+
+***Creación de instancias mediante el uso del operador new.***
+
+***Cree una clase llamada Estudiante con los atributos especificados abajo y sus correspondientes métodos getters y setters (haga uso de las facilidades que brinda eclipse)***
+
+* nombre
+
+* apellido
+
+* comision
+
+* email
+
+* direccion
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+~~~java
+public class Estudiante {
+    
+    //Atributos
+	private String nombre;
+	private String apellido;
+	private String comision;
+	private String email;
+	private String direccion;
+	
+	//Constructores
+	public Estudiante() {	
+	}
+		
+	public Estudiante(String unNombre,String unApe,String unaCom,String unMail,String unaDir) {
+		this.nombre=unNombre;
+		this.apellido=unApe;
+		this.comision=unaCom;
+		this.email=unMail;
+		this.direccion=unaDir;
+	}
+	
+	//Getters y Setters
+	public String getNombre() {
+		return this.nombre;
+	}
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	public String getApellido() {
+		return this.apellido;
+	}
+	public void setApellido(String apellido) {
+		this.apellido = apellido;
+	}
+	public String getComision() {
+		return this.comision;
+	}
+	public void setComision(String comision) {
+		this.comision = comision;
+	}
+	public String getEmail() {
+		return this.email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public String getDireccion() {
+		return this.direccion;
+	}
+	public void setDireccion(String direccion) {
+		this.direccion = direccion;
+	}
+}
+~~~
+
+</details>
+
+***Cree una clase llamada Profesor con los atributos especificados abajo y sus correspondientes métodos getters y setters (haga uso de las facilidades que brinda eclipse)***
+
+* nombre
+
+* apellido
+
+* email
+
+* catedra
+
+* facultad
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+~~~java
+public class Profesor {
+    //Atributos
+	private String nombre;
+	private String apellido;
+	private String email;
+	private String catedra;
+	private String facultad;
+	
+	//Constructor
+	public Profesor() {
+	}
+	
+	public Profesor(String unNombre,String unApe,String unMail,String unaCat,String unaFacu) {
+		this.nombre=unNombre;
+		this.apellido=unApe;
+		this.email=unMail;
+		this.catedra=unaCat;
+		this.facultad=unaFacu;
+	}
+	
+	//Getters y Setters
+	public String getNombre() {
+		return this.nombre;
+	}
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	public String getApellido() {
+		return this.apellido;
+	}
+	public void setApellido(String apellido) {
+		this.apellido = apellido;
+	}
+	public String getEmail() {
+		return this.email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public String getCatedra() {
+		return this.catedra;
+	}
+	public void setCatedra(String catedra) {
+		this.catedra = catedra;
+	}
+	public String getFacultad() {
+		return this.facultad;
+	}
+	public void setFacultad(String facultad) {
+		this.facultad = facultad;
+	}
+}
+~~~
+
+</details>
+
+***Agregue un método de instancia llamado tusDatos() en la clase Estudiante y en la clase Profesor, que retorne un String con los datos de los atributos de las mismas. Para acceder a los valores de los atributos utilice los getters previamente definidos.***
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+metodo tusDatos() en Profesor
+~~~java
+public String tusDatos() {
+        return "Profesor: " + this.getNombre() + " "+ this.getApellido() + "\n     Email: "+
+        		this.getEmail() + ".\n     Catedra: "+ this.getCatedra() + 
+        		".\n     Facultad: "+ this.getFacultad()+".";
+    }
+~~~
+
+metodo tusDatos() en Estudiante
+
+~~~java
+public String tusDatos() {
+    return "Estudiante: " + this.getNombre() + " "+ this.getApellido() + 
+        	".\n     Comision: "+ this.getComision() +"\n     Email: "+
+        	this.getEmail() + ".\n     Direccion: "+ this.getDireccion()+".";
+}
+~~~
+
+</details>
+
+***Escriba una clase llamada Test con el método main, el cual cree un arreglo con 2 objetos Estudiante, otro arreglo con 3 objetos Profesor, y luego recorra ambos arreglos imprimiendo los valores obtenidos mediante el método tusDatos(). Recuerde asignar los valores de los atributos de los objetos Estudiante y Profesor invocando los respectivos métodos setters.***
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+~~~java
+
+~~~
+
+</details>
+
+***Agregue dos breakpoints, uno en la línea donde itera sobre los estudiantes y otro en la línea donde itera sobre los profesores Ejecute la clase Test en modo debug y avance paso a paso visualizando si el estudiante o el profesor recuperado es lo esperado.***
