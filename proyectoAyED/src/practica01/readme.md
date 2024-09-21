@@ -1039,13 +1039,13 @@ La utilizaría de este modo:
 
 * Recorrido del String: Itera a través de cada carácter del string:
 
-{---} Si es un carácter de apertura ((, [, {) --> lo agrego a la pila.
+{---} Si es un carácter de apertura --> lo agrego a la pila.
 
-{---} Si es un carácter de cierre (), ], }) --> compruebo si la pila está vacía:
+{---} Si es un carácter de cierre --> compruebo si la pila está vacía:
 
 {------} Si está vacía, significa que no hay un carácter de apertura correspondiente, por lo que el string no está balanceado.
 
-{------} Si no está vacía, saca el elemento de la parte superior de la pila.Verifica si el carácter de cierre corresponde al carácter de apertura que acabas de sacar. Si no corresponde, el string no está balanceado.
+{------} Si no está vacía, saco el elemento de la parte superior de la pila.Verifico si el carácter de cierre corresponde al carácter de apertura que acabo de sacar. Si no corresponde, el string no está balanceado.
 
 * Finalización: Al final de la iteración:
 
@@ -1058,5 +1058,46 @@ La utilizaría de este modo:
 * ***b. Implemente una clase llamada tp1.ejercicio9.TestBalanceo, cuyo objetivo es determinar si un String dado está balanceado. El String a verificar es un parámetro de entrada (no es un dato predefinido).***
 
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+~~~java
+package ejercicio9;
+
+import java.util.Stack;
+
+/*determinar si un String dado está balanceado. El String a verificar es un
+parámetro de entrada (no es un dato predefinido)*/
+public class TestBalanceo {
+    
+
+    /*metodo*/
+    public Boolean estaBalanceado(String s){
+        /*Inicialización: Creo una pila vacía para almacenar los caracteres de 
+        apertura que se encuentren en el string.*/
+        Stack<Character> pila = new Stack<>();
+
+        /*Recorrido del String: Itera a través de cada carácter del string*/
+        for (char aux : s.toCharArray()){
+            if(aux=='('||aux=='['||aux=='{'){ //si es un carácter de apertura 
+                pila.push(aux); //lo agrego a la pila
+            }
+            if(aux==')'||aux==']'||aux=='}'){ //si es un caracter de cierre
+                if (pila.isEmpty()){
+                    return false; //el string no está balanceado
+                } 
+            } else if (!verifico(aux,pila.pop())){
+                return false; //Los caracteres de apertura y cierre no corresponden
+            }
+        }
+        return pila.isEmpty();
+    }
+
+    /*Verifico si el carácter de cierre corresponde al carácter de apertura*/
+    private Boolean verifico(char inicio, char fin){
+        return ((inicio=='{' && fin=='}')||
+                (inicio=='(' && fin==')')||
+                (inicio=='[' && fin==']'));
+    }
+}
+~~~
 
 </details>
