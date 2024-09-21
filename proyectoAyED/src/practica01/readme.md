@@ -967,3 +967,50 @@ public ArrayList<Integer> combinarOrdenado(ArrayList<Integer> l1, ArrayList<Inte
 ~~~
 
 </details>
+
+## 🟣 Punto 8
+
+***El objetivo de este punto es ejercitar el uso de la API de listas de Java y aplicar conceptos de la programación orientada a objetos. Sean las siguientes especificaciones de cola, cola circular y cola con 2 extremos disponibles, vistas en la explicación teórica:***
+
+* Implemente en JAVA la clase Queue de acuerdo con la especificación dada en el diagrama de clases. Defina esta clase dentro del paquete tp1.ejercicio8.
+
+1. Queue() Constructor de la clase.
+
+2. enqueue(dato: T): Inserta el elemento al final de la cola.
+
+3. dequeue():T Elimina el elemento del frente de la cola y lo retorna. Si la cola está vacía se produce un error.
+
+4. head(): T Retorna el elemento del frente de la cola. Si la cola está vacía se
+produce un error.
+
+5.isEmpty(): boolean Retorna verdadero si la cola no tiene elementos y falso en
+caso contrario.
+
+6. size():int Retorna la cantidad de elementos de la cola.
+
+7. toString(): String Retorna los elementos de la cola en un String.
+
+* Implemente en JAVA las clase CircularQueue de acuerdo con la especificación dada en el diagrama de clases. Defina esta clase dentro del paquete tp1.ejercicio8.
+
+1 shift(): T Permite rotar los elementos, haciéndolo circular. Retorna el elemento
+encolado.
+
+* Implemente en JAVA la clase DoubleEndedQueue de acuerdo con la especificación
+dada en el diagrama de clases. Defina esta clase dentro del paquete tp1.ejercicio8.
+
+1. enqueueFirst():void Permite encolar al inicio.
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+La resolución de los ejercicios esta en la carpeta **ejercicio8**
+
+* <code>[Sequence.java](/proyectoAyED/src/practica01/ejercicio8/Sequence.java)</code>
+
+* <code>[Queue.java](/proyectoAyED/src/practica01/ejercicio8/Queue.java)</code>
+
+* <code>[CircularQueue.java](/proyectoAyED/src/practica01/ejercicio8/CircularQueue.java)</code>
+
+* <code>[DoubleEndedQueue.java](/proyectoAyED/src/practica01/ejercicio8/DoubleEndedQueue.java)</code>
+
+</details>
+
