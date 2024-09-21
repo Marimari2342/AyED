@@ -1013,7 +1013,7 @@ La resolución de los ejercicios esta en la carpeta **ejercicio8**
 
 </details>
 
-## 🟣 Punto 8
+## 🟣 Punto 9
 
 ***Considere un string de caracteres S, el cual comprende únicamente los caracteres: (,),[,],{,}. Decimos que S está balanceado si tiene alguna de las siguientes formas:***
 
