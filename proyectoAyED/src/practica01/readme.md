@@ -636,3 +636,63 @@ Usar LinkedList:
 * Cuando no necesitas acceder frecuentemente a los elementos por índice, ya que acceder a un elemento específico en un LinkedList es costoso.
 
 </details>
+
+## 🟣 Punto 7
+
+***Uso de las estructuras de listas provistas por la API de Java. Para resolver este punto cree el paquete tp1.ejercicio7.***
+
+* ***Escriba una clase llamada TestArrayList cuyo método main recibe una secuencia de números, los agrega a una lista de tipo ArrayList, y luego de haber agregado todos los números a la lista, imprime el contenido de la misma iterando sobre cada elemento.***
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+~~~java
+
+import java.util.ArrayList;
+
+public class TestArrayList {
+    public static void main(String[] args) {
+        // Creo una lista de tipo ArrayList para almacenar los números
+        ArrayList<Integer> numeros = new ArrayList<>();
+
+        // Agrego los numeros al array
+        numeros.add(4);
+        numeros.add(15);
+        numeros.add(54);
+        numeros.add(2);
+
+        // Imprimir el contenido de la lista iterando sobre cada elemento
+        System.out.println("Contenido de la lista:");
+        for (int i=0;i<numeros.size();i++){
+            System.out.println(numeros.get(i));
+        }
+    }
+}
+~~~
+
+</details>
+
+* ***Si en lugar de usar un ArrayList en el inciso anterior hubiera usado un LinkedList ¿Qué diferencia encuentra respecto de la implementación? Justifique***
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+Si se usa una <code>LinkedList</code> en lugar de un <code>ArrayList</code>, hay algunas diferencias en cuanto a la implementación y comportamiento de ambas clases, pero el código para iterar elementos es prácticamente el mismo. 
+
+Hay diferencias en la declaración de la lista, puesto que en lugar de declarar un <code>ArrayList</code>, declararía una <code>LinkedList</code>. La estructura del código sería la misma, solo cambia el tipo de la lista:
+
+~~~java
+ArrayList<Integer> numeros = new ArrayList<>(); //con ArrayList
+~~~
+
+~~~java
+LinkedList<Integer> numeros = new LinkedList<>(); //con LinkedList
+~~~
+
+En cuanto a la iteracion, en ambos casos es muy similar, ya que tanto ArrayList como LinkedList implementan la interfaz List. Por lo tanto, los métodos de iteración se comportan de manera similar. El código de iteración para LinkedList sigue siendo idéntico:
+
+~~~java
+for (int i = 0; i < numeros.size(); i++) {
+    System.out.println(numeros.get(i));
+}
+~~~
+
+</details>
