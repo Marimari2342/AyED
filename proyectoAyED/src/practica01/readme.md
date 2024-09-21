@@ -570,3 +570,69 @@ public class NumerosEnteros {
 ~~~
 
 </details>
+
+## 🟣 Punto 6
+
+***Análisis de las estructuras de listas provistas por la API de Java.***
+
+* ***1. ¿En qué casos ArrayList ofrece un mejor rendimiento que LinkedList?***
+
+<details><summary> <code> click para ver resolución 🖱 </code></summary><br>
+
+ArrayList ofrece un mejor rendimiento en los siguientes casos:
+
+* Acceso aleatorio: La principal ventaja de ArrayList es que permite el acceso a los elementos en tiempo constante cuando se accede a un elemento por su índice. Esto se debe a que internamente es un arreglo dinámico, y accede a un índice de manera directa.
+
+* Iteración: Al ser un arreglo continuo en memoria, iterar sobre un ArrayList es generalmente más rápido que sobre un LinkedList, ya que los datos están almacenados de manera contigua, aprovechando mejor la caché del procesador.
+
+* Adiciones al final de la lista: Si el ArrayList tiene suficiente capacidad (si no es necesario redimensionar el arreglo interno), la operación de agregar un elemento al final es muy rápida.
+
+</details>
+
+* ***2. ¿Cuándo LinkedList puede ser más eficiente que ArrayList?***
+
+<details><summary> <code> click para ver resolución 🖱 </code></summary><br>
+
+LinkedList puede ser más eficiente en los siguientes casos:
+
+* Inserciones y eliminaciones en posiciones intermedias: Las operaciones de inserción y eliminación en el medio o al inicio de la lista son más eficientes en un LinkedList. En cambio, en un ArrayList, insertar o eliminar un elemento en posiciones intermedias implica desplazar todos los elementos posteriores.
+
+* Frecuentes adiciones y eliminaciones al principio de la lista: Para una LinkedList, agregar o eliminar elementos al principio de la lista es una operación mucho más rápida, mientras que en un ArrayList implica mover todos los elementos.
+
+</details>
+
+* ***3. ¿Qué diferencia encuentra en el uso de la memoria en ArrayList y LinkedList?***
+
+<details><summary> <code> click para ver resolución 🖱 </code></summary><br>
+
+La diferencia principal en el uso de la memoria entre ArrayList y LinkedList se debe a sus estructuras internas:
+
+* ArrayList: Utiliza un arreglo contiguo para almacenar sus elementos. Su consumo de memoria es más eficiente porque solo almacena los datos. Sin embargo, cuando el arreglo se queda sin espacio, debe crearse un nuevo arreglo de mayor capacidad y copiar todos los elementos, lo que implica cierta sobrecarga temporal en memoria.
+
+* LinkedList: Utiliza nodos enlazados. Cada nodo almacena tanto el dato como referencias (punteros) al nodo anterior y al nodo siguiente (en una lista doblemente enlazada). Esto significa que por cada elemento se consume memoria adicional para almacenar estas referencias. Además, la memoria no está contiguamente asignada, lo que puede ser menos eficiente para la caché de CPU.
+
+</details>
+
+* ***4. ¿En qué casos sería preferible usar un ArrayList o un LinkedList?***
+
+<details><summary> <code> click para ver resolución 🖱 </code></summary><br>
+
+Usar ArrayList:
+
+* Cuando necesitas acceso rápido por índice (lecturas frecuentes).
+
+* Si tu aplicación realiza muchas iteraciones sobre la lista.
+
+* Cuando las operaciones de inserción y eliminación son principalmente al final de la lista.
+
+* Si el tamaño de la lista es relativamente estable y no se anticipan muchas inserciones/eliminaciones en el medio.
+
+Usar LinkedList:
+
+* Cuando la aplicación requiere inserciones o eliminaciones frecuentes en el medio o al principio de la lista.
+
+* Si el tamaño de la lista cambia constantemente y hay muchas operaciones de inserción y eliminación.
+
+* Cuando no necesitas acceder frecuentemente a los elementos por índice, ya que acceder a un elemento específico en un LinkedList es costoso.
+
+</details>
