@@ -872,7 +872,23 @@ public void invertirArrayList(ArrayList<Integer> lista)
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
 
 ~~~java
+public void invertirArrayList(ArrayList<Integer> lista){
+    // Llamada recursiva para invertir la lista
+    invertirRecursivo(lista, 0);
+}
 
+private static void invertirRecursivo(ArrayList<Integer> lista, int aux) {
+    // Condición de terminación: si hemos llegado al medio de la lista
+    if (aux >= lista.size() / 2) {
+        return;
+    }
+    // Intercambiar elementos
+    int elem = lista.get(aux); //me guardo el elem en pos=aux
+    lista.set(aux, lista.get(lista.size() -1 -aux)); //reescribo en pos=aux 
+    lista.set(lista.size() - 1 - aux, elem); //rescribo en pos contraria a aux
+    // Llamada recursiva con el siguiente índice
+    invertirRecursivo(lista, aux + 1);
+}
 ~~~
 
 </details>
