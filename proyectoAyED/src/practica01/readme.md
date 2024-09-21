@@ -407,3 +407,55 @@ Al insertar un breakpoint en la linea <code>y = tmp</code> y ejecutar en modo de
 ![ImagenDebug](/proyectoAyED/src/recursos/imagen01.png)
 
 </details>
+
+## 🟣 Punto 5
+
+***Dado un arreglo de valores tipo entero se desea calcular el valor máximo, mínimo, y promedio en un único método. Escriba tres métodos de clase, donde respectivamente:***
+
+* ***Devuelva lo pedido por el mecanismo de retorno de un método en Java ("return").***
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+En este caso retorno un arreglo de double con los valores pedidos.
+
+~~~java
+public static double[] metodo1(int[] arreglo){
+    double[] aux = new double[3];
+    aux[0] = -100000; //maximo
+    aux[1] = 100000; //minimo
+    aux[2] = 0; //promedio
+    for (int i=0;i<arreglo.length;i++){
+        if (arreglo[i]>aux[0]){     //valor maximo
+            aux[0]=arreglo[i];
+        }
+        if (arreglo[i]<aux[1]){     //valor minimo
+            aux[1]=arreglo[i];
+        }
+        aux[2]+=arreglo[i];         //valor promedio
+    }
+    aux[2]=aux[2]/arreglo.length;
+    return aux;
+}
+~~~
+
+</details>
+
+* ***Devuelva lo pedido interactuando con algún parámetro (el parámetro no puede ser de tipo arreglo).***
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+~~~java
+
+~~~
+
+</details>
+
+* ***Devuelva lo pedido sin usar parámetros ni la sentencia "return".***
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+~~~java
+
+~~~
+
+</details>
