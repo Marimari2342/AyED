@@ -1031,6 +1031,28 @@ S = "TU"
 
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
 
+Para resolver el problema dado se puede utilizar una **pila (stack)**. La pila es una estructura de datos adecuada para este tipo de problemas debido a su naturaleza de último en entrar, primero en salir (LIFO), lo que se alinea perfectamente con la forma en que los paréntesis y otros delimitadores se abren y cierran.
+
+La utilizaría de este modo:
+
+* Inicialización: Creo una pila vacía para almacenar los caracteres de apertura que se encuentren en el string.
+
+* Recorrido del String: Itera a través de cada carácter del string:
+
+{---} Si es un carácter de apertura ((, [, {) --> lo agrego a la pila.
+
+{---} Si es un carácter de cierre (), ], }) --> compruebo si la pila está vacía:
+
+{------} Si está vacía, significa que no hay un carácter de apertura correspondiente, por lo que el string no está balanceado.
+
+{------} Si no está vacía, saca el elemento de la parte superior de la pila.Verifica si el carácter de cierre corresponde al carácter de apertura que acabas de sacar. Si no corresponde, el string no está balanceado.
+
+* Finalización: Al final de la iteración:
+
+{---} Si la pila está vacía, el string está balanceado (todos los caracteres de apertura tienen su correspondiente carácter de cierre).
+
+{---} Si la pila no está vacía, el string no está balanceado (hay caracteres de apertura sin sus correspondientes caracteres de cierre).
+
 </details>
 
 * ***b. Implemente una clase llamada tp1.ejercicio9.TestBalanceo, cuyo objetivo es determinar si un String dado está balanceado. El String a verificar es un parámetro de entrada (no es un dato predefinido).***
