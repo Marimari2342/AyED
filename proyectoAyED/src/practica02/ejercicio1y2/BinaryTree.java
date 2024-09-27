@@ -1,4 +1,4 @@
-
+package practica02.ejercicio1y2;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -178,5 +178,16 @@ public class BinaryTree <T> {
 			nivel++; //avanzo en el nivel del arbol
 		}
    }	
+   
+   // Metodo para visualizar datos del arbol
+	public void imprimir() {
+		if (this != null) {
+			if (this.hasLeftChild())
+				this.getLeftChild().imprimir();
+			System.out.print(this.data + " ");
+			if (this.hasRightChild())
+				this.getRightChild().imprimir();
+		}
+	}
 }
 
