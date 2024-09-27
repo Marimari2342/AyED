@@ -1,6 +1,6 @@
-package tp2.ejercicio1;
 
-
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class BinaryTree <T> {
 	
@@ -140,10 +140,43 @@ public class BinaryTree <T> {
  	   return aux;
     }
 
-	// 0<=n<=m
+	/*entreNiveles(int n, m) Imprime el recorrido por niveles de los elementos del 
+	árbol receptor entre los niveles n y m (ambos inclusive). (0 ≤ n < m ≤ altura del 
+	árbol).*/
 	public void entreNiveles(int n, int m){
+		// verifico que el arbol no este vacío y n y m sean válidos
+		if (this.isEmpty() || n < 0 || m < n){
+			return;
+		}
+		/*usamos una cola para realizar recorrido por niveles. Iniciamos 
+		añadiendo el nodo raiz (this). Además iniciamos en el nivel 0 y vamos
+		llevando registro de en que nivel estamos para saber cuando imprimir*/
+		Queue<BinaryTree> cola = new LinkedList<>();
+		cola.add(this);
+		int nivel = 0;
 		
-   }
-		
+		while (!cola.isEmpty()){
+			int aux = cola.size(); // Número de nodos en el nivel actual
+			if (nivel >= n && nivel <= m ) { // Entra al if si esta entre n y m
+				System.out.print("Nivel "+nivel+" --> ");
+				for (int i=0;i<aux;i++){
+					BinaryTree<T> nodo = cola.remove(); //extraigo el nodo en la parte frontal de la cola
+					System.out.print(getData()+" "); //imprimo
+					if (nodo.hasLeftChild()){
+						cola.add(nodo.getLeftChild());
+					}
+					if (nodo.hasRightChild()){
+						cola.add(nodo.getRightChild());
+					}
+				}
+				System.out.println(); //salto de linea
+			} else {	//Si no esta entre n y m solo saco los nodos de la cola
+				for (int i=0;i<aux;i++){
+					cola.remove();
+				}
+			}
+			nivel++; //avanzo en el nivel del arbol
+		}
+   }	
 }
 
