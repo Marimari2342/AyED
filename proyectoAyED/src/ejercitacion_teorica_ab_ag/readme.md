@@ -423,3 +423,143 @@ Sabemos que un arbol binario lleno cumple que la cantidad de nodos n = 2^(h+1)-1
 Por lo tanto, la respuesta correcta es la (d).
 
 </details>
+
+## 🔵 Punto 15
+
+La siguiente figura muestra un árbol general:
+
+~~~
+         (A)
+      /   |   \
+  (B)    (C)    (D)
+  / \          / | \
+(E) (F)      (G)(H)(I)
+   / | \      |    / \
+ (J)(K)(L)   (M) (N) (O)
+             / \
+           (P) (Q)
+~~~
+
+(a) Complete los blancos de las sentencias con la terminología vista en clase.
+
+i. ***(A)*** es la raíz del árbol.
+
+ii. ***(A)*** es padre de B, C y D.
+
+iii. ***(E)*** y ***(F)*** son hermanos, puesto que ambos son hijos de B. 
+
+iv. ***(E),(J),(K),(L),(P),(Q),(N)*** y ***(O)*** son las hojas del árbol.
+
+v. El camino desde A a J es único, lo conforman los nodos ***(A),(B),(F),(J)*** y es de largo ***4 nodos (pero 3 aristas)***.
+
+vi. ***(D)*** es ancestro de P, y por lo tanto ***(P)*** es descendiente de D.
+
+vii. L no es descendiente de C, puesto que no existe ***un camino*** desde C a L.
+
+viii. La profundidad/nivel de C es ***1***, de F es ***2*** y de ***P*** es 4.
+
+ix. La altura de C es ***0*** de ***I*** es 1 y de D es ***3*** (La altura de un nodo se define como el número de nodos en el camino más largo hacia una hoja desde ese nodo).
+
+x. La altura del árbol es 4 (largo del camino entre la ***raiz*** y ***la hoja más profunda***).
+
+----------------------
+
+(b) Aplique los recorridos:
+
+i. en profundidad (preorden, inorden, postorden).
+
+ii. por niveles
+
+<details><summary> <code> click para ver resolución 🖱 </code></summary><br>
+
+* preOrden -->   A B E F J K L C D G M P O H I N O
+
+* inOrden -->    E B J F K L A C P M Q G D H N I O 
+
+* postOrden -->  E J K L F B C P O M G H N O I D A
+
+* porNiveles --> A B C D E F G H I J K L M N O P Q 
+
+</details>
+
+## 🔵 Punto 16
+
+¿Cuál es el número mínimo y máximo de nodos de un árbol general completo de altura h y grado k?
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+Sea un arbol general completo de altura h y grado k, la cantidad de nodos (n) del arbol cumplo
+
+~~~
+(k ^ h + k - 2 ) / ( k - 1 ) <= n <= (k ^ ( h + 1 ) – 1 ) / ( k - 1 )
+~~~
+
+Por ejemplo, si el arbol es de altura 2 y grado 3:
+
+~~~
+            (a)
+       /     |     \
+   (b)      (c)      (d)
+  / | \    /
+(e)(f)(g)(h)
+~~~
+
+La cantidad de nodos varía entre:
+
+~~~
+(3 ^ 2 + 3 - 2 ) / ( 3 - 1 ) <= n <= (3 ^ ( 2 + 1 ) – 1 ) / ( 3 - 1 )
+(9 + 1 ) / 2 <= n < ( 27 - 1 ) / 2
+5 <= n <= 13
+~~~
+
+En el ejemplo tenemos 8 nodos que pertenece al rango dado.
+
+</details>
+
+## 🔵 Punto 17
+
+El recorrido inorden en un árbol general visita:
+
+a) Primero la mitad de los subárboles hijos, luego la raíz y luego los restantes subárboleshijos.
+
+b) Primero la raíz y luego los subárboles hijos.
+
+c) Primero los subárboles hijos y luego la raíz.
+
+d) Primero el subárbol hijo más izquierdo, luego la raíz y luego los restantes subárboles hijos.
+
+## 🔵 Punto 18
+
+En un árbol general, la profundidad de un nodo n1 es:
+
+a) La longitud del único camino que existe entre la raíz y el nodo n1.
+
+b) La longitud del camino más largo que existe entre el nodo n1 y una hoja.
+
+c) La cantidad de nodos hijos del nodo n1.
+
+d) Ninguna de las otras opciones.
+
+## 🔵 Punto 19
+
+Un árbol general lleno de grado 4, tiene 21 nodos.
+
+a) ¿Cuál es la altura del árbol?
+
+b) Desarrolle el proceso realizado para obtener la respuesta anterior.
+
+## 🔵 Punto 20
+
+¿Cuál es la cantidad mínima de nodos en un árbol general completo de grado 3 y altura 4?
+
+## 🔵 Punto 21
+
+Si un árbol general lleno de grado 5 tiene 125 hojas.
+
+a) ¿Cuál es la cantidad de nodos internos del árbol?
+
+b) Desarrolle el proceso realizado para obtener la respuesta anterior.
+
+## 🔵 Punto 22
+
+¿Cuál es la cantidad de nodos en un árbol general COMPLETO de grado 4 y altura 3?
