@@ -159,3 +159,50 @@ Al aplicar el método traverse con la raíz del árbol, el flujo es el siguiente
 El resultado sería la siguiente secuencia de caracteres: C A B B A E D D F F E C
 
 </details>
+
+## 🔵 Punto 5
+
+Evalúe la siguiente expresión postfija y determine cuál es el resultado.
+
+6 5 * 7 3 − 4 8 + * +
+
+**(a) 78** ✔️
+
+(b) 66 
+
+(c) 34 
+
+(d) 44
+
+<details><summary> <code> click para ver resolución 🖱 </code></summary><br>
+
+Construcción de un arbol a partir de una expresión postfija
+
+~~~
+tomo un carácter de la expresión
+mientras ( existe carácter ) hacer
+    si es un operando 🡪 creo un nodo y lo apilo.
+    si es un operador (lo tomo como la raíz de los dos últimos nodos creados)
+        🡪 - creo un nodo R,
+    - desapilo y lo agrego como hijo derecho de R
+        - desapilo y lo agrego como hijo izquierdo de R
+    - apilo R.
+    tomo otro carácter
+fin
+~~~
+
+Entonces:
+
+~~~
+          (+)
+         /   \
+      (*)     (*)
+     /   \   /   \
+   (6)  (5) (-)   (+)
+            / \   / \
+          (7) (3)(4)(8) 
+~~~
+
+Nos queda = (6 * 5) + [(7 - 3) * (4 + 8)] = 30 + (4 * 12) = 30 + 48 = 78
+
+</details>
