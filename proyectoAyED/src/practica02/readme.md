@@ -389,11 +389,11 @@ public class Main {
 Cree una clase Java llamada Transformacion que tenga como variable de instancia un árbol binario de números enteros y un método de instancia suma (): BinaryTree<Integer> el cuál devuelve el árbol en el que se reemplazó el valor de cada nodo por la suma de todos los elementos presentes en su subárbol izquierdo y derecho. Asuma que los valores de los subárboles vacíos son ceros. Por ejemplo:
 
 ~~~
-   (1)						 (35)	
-  /   \						/    \
+   (1)					     (35)	
+  /   \					    /    \
 (2)    (3)				 (4)     (26)			
-  \    / \		 -->	   \     /  \
-  (4) (5) (6)		       (0) (15) (0)
+  \    / \		 -->	   	   \     /  \
+  (4) (5) (6)		       		   (0) (15) (0)
       / \				       /  \
     (7) (8)				     (0)  (0)
 ~~~
