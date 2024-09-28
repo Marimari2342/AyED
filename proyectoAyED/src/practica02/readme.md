@@ -180,3 +180,31 @@ public class ContadorArbol {
 ~~~
 
 </details>
+
+## 🔵 Punto 4
+
+Una **RED BINARIA** es una red que posee una topología de árbol binario lleno. Los nodos que conforman una red binaria llena tiene la particularidad de que todos ellos conocen cuál es su retardo de reenvío. El retardo de reenvío se define como el período comprendido entre que un nodo recibe un mensaje y lo reenvía a sus dos hijos.
+
+Su tarea es calcular el mayor retardo posible, en el camino que realiza un mensaje desde la raíz hasta llegar a las hojas en una red binaria llena. (Si hay más de un máximo retorne el último valor hallado).
+
+Nota: asuma que cada nodo tiene el dato de retardo de reenvío expresado en cantidad de segundos.
+
+a) Indique qué estrategia (recorrido en profundidad o por niveles) utilizará para resolver el problema.
+
+<details><summary> <code> click para ver resolución 🖱 </code></summary><br>
+
+Para resolver este problema, la estrategia más adecuada sería un recorrido en profundidad utilizando un enfoque PostOrden (izquierda, derecha, raíz).
+
+Puesto que el objetivo es encontrar el mayor retardo acumulado desde la raíz hasta las hojas en una red binaria llena, lo que implica analizar todas las ramas de la red (desde la raíz hasta las hojas); un recorrido en profundidad es la mejor opción porque nos permite explorar cada rama completamente antes de pasar a la siguiente. Esto es útil porque necesitamos sumar los retardos de cada nodo en el camino y así identificar cuál rama tiene el mayor retardo.
+
+Utilizar un recorrido en PostOrden es eficiente para este tipo de problemas, ya que primero calculamos el retardo de los hijos antes de volver al padre. De este modo, cuando llegamos a la raíz, ya sabemos cuál es el retardo acumulado más largo en sus subárboles. En cada paso, comparamos los retardos de los hijos de un nodo y sumamos el mayor retardo al del nodo actual, propagando esta suma hacia la raíz.
+
+* Estrategia:
+
+Caso base: Si llegamos a una hoja, simplemente retornamos su retardo.
+
+Paso recursivo: Para cada nodo interno, llamamos recursivamente a sus hijos izquierdo y derecho para obtener el mayor retardo de esos caminos, sumamos el retardo del nodo actual y devolvemos el valor acumulado.
+
+</details>
+
+b) Cree una clase Java llamada RedBinariaLlena donde implementará lo solicitado en el método retardoReenvio():int
