@@ -206,3 +206,51 @@ Entonces:
 Nos queda = (6 * 5) + [(7 - 3) * (4 + 8)] = 30 + (4 * 12) = 30 + 48 = 78
 
 </details>
+
+## 🔵 Punto 6
+
+Elija la expresión algebraica almacenada en el siguiente árbol:
+
+~~~
+        (+)
+      /     \
+    (/)     (*)
+    / \     / \
+  (-) (c) (d) (e)
+  / \
+(a) (b)
+~~~
+
+(a) ((a – b / c) + d * e)
+
+(b) (((a – b) / (c + d)) + d * e)
+
+(c) ((a – b / c) + (d * e))
+
+**(d) (((a – b) / c) + (d * e))** ✔️
+
+<details><summary> <code> click para ver resolución 🖱 </code></summary><br>
+
+Suponiendo que con el arbol armamos una expresión postfija la respuesta correcta es la (d)
+
+</details>
+
+## 🔵 Punto 7
+
+¿Cuál es el número mínimo de nodos en un árbol binario completo de altura 4? 
+
+(a) 10      (b) 15      (c) 12      (d) 31      **(e) 16** ✔️
+
+<details><summary> <code> click para ver resolución 🖱 </code></summary><br>
+
+Un árbol binario completo es un árbol en el que todos los niveles, excepto el último, están completamente llenos, y todos los nodos del último nivel están lo más a la izquierda posible.
+
+Dado que el número de nodos n de un arbol binario completo de altura h cumple que:
+
+~~~
+2^h <= n <= (2^(h+1)-1)
+~~~
+
+Podemos decir que el número MINIMO de nodos en un árbol binario de altura 4 es 2^4 = 16
+
+</details>
