@@ -379,6 +379,29 @@ La respuesta es el **Arbol 4**
 Reconstruya el árbol binario T cuyo recorrido preorden es 2 5 3 9 7 1 6 4 8 y su recorrido inorden es 9 3 7 5 1 2 6 8 4.
 
 <details><summary> <code> click para ver resolución 🖱 </code></summary><br>
+
+raiz --> (2) | subAiz --> (9 3 7 5 1) | subAdr --> (6 8 4)
+
+* subAiz = raiz --> (5) | subAizB --> (9 3 7) | subAdrB --> (1)
+
+* subAizB = raiz (3) | subAizC --> (9) | subAdrC --> (7)
+
+* subAdr = raiz (6) | subAdrB --> (8 4)
+
+* subAdrB = raiz (4) | subAizC --> (8)
+
+El arbol nos queda:
+
+~~~
+       (2)
+       / \
+    (5)   (6)
+    / \     \
+  (3) (1)   (4)
+  / \       /
+(9) (7)   (8)
+~~~
+
 </details>
 
 ## 🔵 Punto 14
@@ -391,7 +414,12 @@ b) N = L + 1
 
 c) N = L – 1
 
-d) N = 2*L – 1
+**d) N = 2*L – 1**
 
 <details><summary> <code> click para ver resolución 🖱 </code></summary><br>
+
+Sabemos que un arbol binario lleno cumple que la cantidad de nodos n = 2^(h+1)-1, donde la cantidad de hojas es L = ( n + 1 ) / 2 --> 2 * L = n + 1 --> 2 * L - 1 = n
+
+Por lo tanto, la respuesta correcta es la (d).
+
 </details>
