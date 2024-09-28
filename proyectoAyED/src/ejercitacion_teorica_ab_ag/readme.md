@@ -315,4 +315,6 @@ Si es operador lo bajo, si no es operador es una hoja
 
 La profundidad del nodo d es 3.
 
+La operación que me quedaría sería --> ( a + e ) + { [ ( b - c ) * d ] / f }
+
 </details>
