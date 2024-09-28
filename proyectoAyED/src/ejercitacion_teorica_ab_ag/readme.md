@@ -262,3 +262,57 @@ Dado que el número de nodos n de un arbol binario completo de altura h cumple q
 Podemos decir que el número MINIMO de nodos en un árbol binario de altura 4 es 2^4 = 16
 
 </details>
+
+## 🔵 Punto 9
+
+Construya el árbol de expresión correspondiente a la siguiente expresión infija. 
+
+~~~
+( A + ( B * C ) ) * ( D – E )
+~~~
+
+<details><summary> <code> click para ver resolución 🖱 </code></summary><br>
+
+raiz = * | subAiz = ( A + ( B * C ) ) | subAdr = ( D – E )
+
+~~~
+      (*)
+    /     \
+  (+)     (-)
+  / \     / \
+(A) (*) (D) (E)
+    / \
+  (B) (C)
+~~~
+
+</details>
+
+## 🔵 Punto 10
+
+Construya el árbol de expresión correspondiente a la siguiente expresión prefija.
+
+~~~
++ + a e / * - b c d f
+~~~
+
+¿Cuál es la profundidad del nodo d?
+
+<details><summary> <code> click para ver resolución 🖱 </code></summary><br>
+
+Si es operador lo bajo, si no es operador es una hoja
+
+~~~
+      (+)
+     /   \
+  (+)     (/)
+  / \     / \
+(a) (e) (*) (f)
+        / \
+      (-) (d)
+      / \
+    (b) (c)
+~~~
+
+La profundidad del nodo d es 3.
+
+</details>
