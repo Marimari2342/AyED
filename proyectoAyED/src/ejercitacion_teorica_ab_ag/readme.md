@@ -100,3 +100,33 @@ Sabemos que
 Si el último nodo en postOrden e inOrden es el mismo (X) podemos concluir que el subArbol derecho de T es vacio.
 
 </details>
+
+## 🔵 Punto 4
+
+Se han estudiado los distintos recorridos de un árbol binario. Abajo se muestra un código que
+combina dos de ellos. ¿Cuál es el resultado si se llama con la raíz del árbol de la figura?
+
+~~~
+public void traverse(ArbolBinario<T> a) {
+    if (!a.esVacio()) {
+        System.out.print(a.getDato());
+        if (a.tieneHijoIzquierdo())
+            traverse(a.getHijoIzquierdo());
+        if (a.tieneHijoDerecho())
+            traverse(a.getHijoDerecho());
+        System.out.print(a.getDato());
+    }
+}
+~~~
+
+~~~
+      (C)
+     /   \
+  (A)     (E)
+    \     / \
+   (B)  (D) (F)
+~~~
+
+<details><summary> <code> click para ver resolución 🖱 </code></summary><br>
+
+</details>
