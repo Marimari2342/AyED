@@ -199,11 +199,13 @@ Puesto que el objetivo es encontrar el mayor retardo acumulado desde la raíz ha
 
 Utilizar un recorrido en PostOrden es eficiente para este tipo de problemas, ya que primero calculamos el retardo de los hijos antes de volver al padre. De este modo, cuando llegamos a la raíz, ya sabemos cuál es el retardo acumulado más largo en sus subárboles. En cada paso, comparamos los retardos de los hijos de un nodo y sumamos el mayor retardo al del nodo actual, propagando esta suma hacia la raíz.
 
-* Estrategia:
+**Estrategia:**
 
-Caso base: Si llegamos a una hoja, simplemente retornamos su retardo.
+* Caso base: Si llegamos a una hoja, simplemente retornamos su retardo.
 
-Paso recursivo: Para cada nodo interno, llamamos recursivamente a sus hijos izquierdo y derecho para obtener el mayor retardo de esos caminos, sumamos el retardo del nodo actual y devolvemos el valor acumulado.
+* Paso recursivo: Para cada nodo interno, llamamos recursivamente a sus hijos izquierdo y derecho para obtener el mayor retardo de esos caminos, sumamos el retardo del nodo actual y devolvemos el valor acumulado.
+
+------------------------
 
 </details>
 
