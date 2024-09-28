@@ -526,7 +526,19 @@ b) Primero la raíz y luego los subárboles hijos.
 
 c) Primero los subárboles hijos y luego la raíz.
 
-d) Primero el subárbol hijo más izquierdo, luego la raíz y luego los restantes subárboles hijos.
+**d) Primero el subárbol hijo más izquierdo, luego la raíz y luego los restantes subárboles hijos.** ✔️ 
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+La respuesta correcta es la (d), puesto que el recorrido inorden en un árbol general se define de la siguiente manera:
+
+1. Primero visita el subárbol hijo más izquierdo.
+
+2. Luego visita la raíz del árbol.
+
+3. Finalmente, visita los restantes subárboles (de izquierda a derecha).
+
+</details>
 
 ## 🔵 Punto 18
 
@@ -540,6 +552,10 @@ c) La cantidad de nodos hijos del nodo n1.
 
 d) Ninguna de las otras opciones.
 
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+</details>
+
 ## 🔵 Punto 19
 
 Un árbol general lleno de grado 4, tiene 21 nodos.
@@ -548,9 +564,17 @@ a) ¿Cuál es la altura del árbol?
 
 b) Desarrolle el proceso realizado para obtener la respuesta anterior.
 
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+</details>
+
 ## 🔵 Punto 20
 
 ¿Cuál es la cantidad mínima de nodos en un árbol general completo de grado 3 y altura 4?
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+</details>
 
 ## 🔵 Punto 21
 
@@ -560,6 +584,14 @@ a) ¿Cuál es la cantidad de nodos internos del árbol?
 
 b) Desarrolle el proceso realizado para obtener la respuesta anterior.
 
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+</details>
+
 ## 🔵 Punto 22
 
 ¿Cuál es la cantidad de nodos en un árbol general COMPLETO de grado 4 y altura 3?
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+</details>
