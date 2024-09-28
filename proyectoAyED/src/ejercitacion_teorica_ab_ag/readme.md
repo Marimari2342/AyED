@@ -45,6 +45,36 @@ binario completo es lleno? ¿Y viceversa?
 
 <details><summary> <code> click para ver resolución 🖱 </code></summary><br>
 
+* **Árbol Binario Completo:** un árbol binario completo es un árbol en el que todos los niveles, excepto el último, están completamente llenos, y todos los nodos del último nivel están lo más a la izquierda posible. Esto significa que si hay un nivel incompleto, solo faltan nodos al final, no en el medio.
+
+Ejemplo de Árbol Binario Completo:
+
+~~~
+       1
+      / \
+     2   3
+    / \  / 
+   4   5 6 
+~~~
+
+En este caso, el árbol tiene tres niveles, y el último nivel (nivel 3) está lleno desde la izquierda, con nodos 4, 5 y 6.
+
+* **Árbol Binario Lleno:** un árbol binario lleno es un árbol en el que todos los niveles están completamente llenos. Esto significa que cada nodo tiene exactamente 0 o 2 hijos y todos los nodos están en los mismos niveles.
+
+Ejemplo de Árbol Binario Lleno:
+
+~~~
+       1
+      / \
+     2   3
+    / \  / \
+   4   5 6  7
+~~~
+
+En este caso, todos los niveles del árbol están completamente llenos y todos los nodos tienen dos hijos (excepto las hojas).
+
+Un árbol binario completo no necesita estar completamente lleno en todos los niveles, solo en los niveles superiores. Un árbol completo puede tener un nivel incompleto en su parte inferior. Por otro lado, un árbol binario lleno, por definición, cumple con la condición de ser completo, ya que todos sus niveles están llenos.
+
 </details>
 
 ## 🔵 Punto 3
