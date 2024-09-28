@@ -129,4 +129,33 @@ public void traverse(ArbolBinario<T> a) {
 
 <details><summary> <code> click para ver resolución 🖱 </code></summary><br>
 
+El código dado combina dos recorridos: preorden y postorden. El método traverse sigue estos pasos:
+
+* Preorden: Imprime el dato del nodo antes de recorrer sus hijos (System.out.print(a.getDato())).
+
+* Recorre el hijo izquierdo (si existe).
+
+* Recorre el hijo derecho (si existe).
+
+* Postorden: Imprime nuevamente el dato del nodo después de recorrer sus hijos (System.out.print(a.getDato())).
+
+Al aplicar el método traverse con la raíz del árbol, el flujo es el siguiente:
+
+~~~
+1. Se llama a traverse(C), imprime C.                           --> C
+2. Se llama a traverse(A) (hI de C), imprime A.                 --> A
+3. Se llama a traverse(B) (hD de A), imprime B.                 --> B           
+4. B no tiene hijos, entonces imprime nuevamente B.             --> B
+5. Se vuelve a A, se imprime nuevamente A.                      --> A
+6. Se vuelve a C, llama a traverse(E) (hD de C), imprime E.     --> E
+7. Se llama a traverse(D) (hI de E), imprime D.                 --> D
+8. D no tiene hijos, se imprime nuevamente D.                   --> D
+9. Se vuelve a E, llama a traverse(F) (hD de E), imprime F.     --> F
+10. F no tiene hijos, se imprime nuevamente F.                  --> F
+11. Se vuelve a E, se imprime nuevamente E.                     --> E
+12. Finalmente, se vuelve a C, y se imprime nuevamente C.       --> C
+~~~
+
+El resultado sería la siguiente secuencia de caracteres: C A B B A E D D F F E C
+
 </details>
