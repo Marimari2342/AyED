@@ -544,17 +544,13 @@ La respuesta correcta es la (d), puesto que el recorrido inorden en un árbol ge
 
 En un árbol general, la profundidad de un nodo n1 es:
 
-a) La longitud del único camino que existe entre la raíz y el nodo n1.
+**a) La longitud del único camino que existe entre la raíz y el nodo n1.** ✔️
 
 b) La longitud del camino más largo que existe entre el nodo n1 y una hoja.
 
 c) La cantidad de nodos hijos del nodo n1.
 
 d) Ninguna de las otras opciones.
-
-<details><summary> <code> Respuesta 🖱 </code></summary><br>
-
-</details>
 
 ## 🔵 Punto 19
 
@@ -565,6 +561,24 @@ a) ¿Cuál es la altura del árbol?
 b) Desarrolle el proceso realizado para obtener la respuesta anterior.
 
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+Sabemos que un arbol lleno de grado k y altura h cumple que la cantidad de nodos es:
+
+* n = (k ^ ( h + 1 ) – 1 ) / ( k - 1 )
+
+Como n = 21 y k = 4, reemplazamos en la ecuación de arriba y despejamos h que va a ser la altura del arbol.
+
+~~~
+21 = (4 ^ ( h + 1 ) – 1 ) / ( 4 - 1 )
+21 * 3 = 4 ^ ( h + 1 ) – 1
+63 + 1 = 4 ^ ( h + 1 )
+64 = 4 ^ ( h + 1 )
+4 ^ 3 = 4 ^ ( h + 1 )      //como las bases son iguales, igualamos los exponentes
+3 = h + 1
+h = 2 
+~~~
+
+Por lo tanto, la altura del arbol es h = 2.
 
 </details>
 
