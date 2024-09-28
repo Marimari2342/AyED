@@ -318,3 +318,80 @@ La profundidad del nodo d es 3.
 La operación que me quedaría sería --> ( a + e ) + { [ ( b - c ) * d ] / f }
 
 </details>
+
+## 🔵 Punto 11
+
+Obtenga la expresión prefija de la siguiente expresión postfija:
+
+~~~
+A B C * D - E F / G / - *
+~~~
+
+<details><summary> <code> click para ver resolución 🖱 </code></summary><br>
+
+Este sería el arbol de expresión.
+
+~~~
+    (*)
+   /   \
+(A)     (-)
+       /   \
+    (-)     (/)
+    / \     / \
+  (*) (D)  (/) (G)
+  / \      / \
+(B) (C)  (E) (F)
+~~~
+
+Entonces la expresión prefija sería: * A - - * B C D / / E F G 
+
+</details>
+
+## 🔵 Punto 12
+
+¿Cuál de los siguientes árboles binarios tiene su recorrido inorden BCAD y preorden ABCD?
+
+~~~
+Arbol 1    Arbol 2    Arbol 3    Arbol 4
+  (A)        (A)        (A)        (A)
+  / \        / \          \        / \
+(B) (C)    (C) (D)        (B)    (B) (D)
+    /      /              / \      \
+   (D)   (B)            (C) (D)     (C)
+~~~
+
+<details><summary> <code> click para ver resolución 🖱 </code></summary><br>
+
+* Recorrido <code>preOrden</code> --> raiz - hI - hD
+
+* Recorrido <code>inOrden</code> --> hI - raiz - hD
+
+Por el recorrido preorden sabemos que la raiz es A, por lo tanto, viendo el recorrido inorden sabemos que subAiz: (B C) | raiz: A | subAdr: D. Podemos descartar entonces los arboles 1 y 3.
+
+Luego volviendo a mirar el recorrido preorden vemos que B va antes que C, por lo tanto descartamoos el arbol 2.
+
+La respuesta es el **Arbol 4**
+
+</details>
+
+## 🔵 Punto 13
+
+Reconstruya el árbol binario T cuyo recorrido preorden es 2 5 3 9 7 1 6 4 8 y su recorrido inorden es 9 3 7 5 1 2 6 8 4.
+
+<details><summary> <code> click para ver resolución 🖱 </code></summary><br>
+</details>
+
+## 🔵 Punto 14
+
+En un árbol binario lleno, si hay L hojas, entonces el número total de nodos N es:
+
+a) N = 2*L
+
+b) N = L + 1
+
+c) N = L – 1
+
+d) N = 2*L – 1
+
+<details><summary> <code> click para ver resolución 🖱 </code></summary><br>
+</details>
