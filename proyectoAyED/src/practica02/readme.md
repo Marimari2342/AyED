@@ -501,3 +501,261 @@ El método devuelve true si el subárbol cuya raíz es “num”, tiene en su su
 Por ejemplo, con un árbol como se muestra en la siguiente imagen:
 
 ![imagen](/proyectoAyED/src/recursos/imagen03.png)
+
+<details><summary> <code> click para ver resolución 🖱 </code></summary><br>
+
+~~~java
+package practica02.ejercicio7;
+
+import practica02.ejercicio1y2.BinaryTree;
+
+public class ParcialArboles {
+
+    // única variable de instancia
+    private BinaryTree<Integer> arbol;
+
+    public ParcialArboles(BinaryTree<Integer> unArbol) {
+        arbol = unArbol;
+    }
+
+    // Método para buscar el número pasado en "num" dentro del árbol
+    private BinaryTree<Integer> buscar(BinaryTree<Integer> arbol, int num) {
+        if (arbol == null || arbol.isEmpty()) {
+            return null;  // Si el árbol está vacío, retorna null
+        }
+        if (num == arbol.getData()) {
+            return arbol;  // Si se encuentra el número, devuelve el árbol
+        } else {
+            BinaryTree<Integer> aux = null;
+            if (arbol.hasLeftChild()) {
+                aux = buscar(arbol.getLeftChild(), num);  // Busca en el subárbol izquierdo
+            }
+            if (arbol.hasRightChild() && aux == null) {
+                aux = buscar(arbol.getRightChild(), num);  // Busca en el subárbol derecho si no lo encontró en el izquierdo
+            }
+            return aux;  // Retorna el nodo si lo encuentra, o null
+        }
+    }
+
+    // Método para evaluar si el subárbol izquierdo tiene más nodos con un único hijo que el derecho
+    private boolean evaluar(BinaryTree<Integer> arbol) {
+        int izq = -1;  // Inicializo con -1 si el subárbol izquierdo no existe
+        int der = -1;  // Inicializo con -1 si el subárbol derecho no existe
+
+        if (arbol.hasLeftChild()) {
+            izq = contar(arbol.getLeftChild());  // Cuenta los nodos con un único hijo en el subárbol izquierdo
+        }
+        if (arbol.hasRightChild()) {
+            der = contar(arbol.getRightChild());  // Cuenta los nodos con un único hijo en el subárbol derecho
+        }
+
+        return izq > der;  // Verifica si la cantidad en el subárbol izquierdo es mayor
+    }
+
+    // Método para contar cuántos nodos en un subárbol tienen un único hijo
+    private int contar(BinaryTree<Integer> arbol) {
+        int cant = 0;
+
+        if (arbol.hasLeftChild()) {
+            cant += contar(arbol.getLeftChild());  // Recursivamente cuenta en el subárbol izquierdo
+        }
+        if (arbol.hasRightChild()) {
+            cant += contar(arbol.getRightChild());  // Recursivamente cuenta en el subárbol derecho
+        }
+
+        // Si el nodo tiene solo un hijo, se cuenta
+        if ((arbol.hasLeftChild() && !arbol.hasRightChild()) || (!arbol.hasLeftChild() && arbol.hasRightChild())) {
+            cant += 1;
+        }
+
+        return cant;  // Retorna la cantidad de nodos con un único hijo
+    }
+
+    /**
+     * Método público que verifica si el subárbol cuya raíz es el nodo con valor "num"
+     * tiene más nodos con un único hijo en su subárbol izquierdo que en su subárbol derecho.
+     * 
+     * @param num valor de la raíz del subárbol a evaluar
+     * @return true si el subárbol izquierdo tiene más nodos con un único hijo, false en caso contrario
+     */
+    public boolean isLeftTree(int num) {
+        BinaryTree<Integer> arbolRaiz = buscar(arbol, num);  // Busca el árbol con raíz en "num"
+        
+        // Si el árbol no se encuentra o está vacío, devuelve false
+        if (arbolRaiz == null || arbolRaiz.isEmpty()) {
+            return false;
+        }
+
+        // Evalúa si el subárbol izquierdo tiene más nodos con un único hijo que el derecho
+        return evaluar(arbolRaiz);
+    }
+}
+~~~
+
+</details>
+
+## 🔵 Punto 8
+
+Escribir en una clase ParcialArboles el método público con la siguiente firma:
+
+~~~java
+public boolean esPrefijo(BinaryTree<Integer> arbol1, BinaryTree<Integer> arbol2)
+~~~
+
+El método devuelve true si arbol1 es prefijo de arbol2, false en caso contrario. Se dice que un árbol binario arbol1 es prefijo de otro árbol binario arbol2, cuando arbol1 coincide con la parte inicial del árbol arbol2 tanto en el contenido de los elementos como en su estructura. Por ejemplo, en la siguiente imagen: arbol1 ES prefijo de arbol2.
+
+![imagenEsPrefijo](/proyectoAyED/src/recursos/imagen04.png)
+
+
+<details><summary> <code> click para ver resolución 🖱 </code></summary><br>
+
+~~~java
+package practica02.ejercicio8;
+import practica02.ejercicio1y2.BinaryTree;
+
+public class ParcialArboles {
+
+    public ParcialArboles() {  
+    }
+
+    public boolean esPrefijo(BinaryTree<Integer> arbol1, BinaryTree<Integer> arbol2) {
+        // Si ambos árboles están vacíos, son prefijos
+        if (arbol1.isEmpty() && arbol2.isEmpty()) {
+            return true;
+        }
+        // Si solo uno de los dos está vacío, no pueden ser prefijos
+        if (arbol1.isEmpty() || arbol2.isEmpty()) {
+            return false;
+        }
+        // Se pasa al chequeo recursivo para ver si arbol1 es prefijo de arbol2
+        return evaluarPrefijo(arbol1, arbol2);
+    }
+
+    private boolean evaluarPrefijo(BinaryTree<Integer> a1, BinaryTree<Integer> a2) {
+        // Si los datos no coinciden, a1 no es prefijo de a2
+        if (!a1.getData().equals(a2.getData())) {
+            return false;
+        }
+        // Chequeo recursivo para el hijo izquierdo
+        if (a1.hasLeftChild()) {
+            if (!a2.hasLeftChild()) {
+                return false;  // Si a1 tiene hijo izquierdo pero a2 no, no es prefijo
+            }
+            // Evaluar el subárbol izquierdo
+            if (!evaluarPrefijo(a1.getLeftChild(), a2.getLeftChild())) {
+                return false;
+            }
+        }
+        
+        // Chequeo recursivo para el hijo derecho
+        if (a1.hasRightChild()) {
+            if (!a2.hasRightChild()) {
+                return false;  // Si a1 tiene hijo derecho pero a2 no, no es prefijo
+            }
+            // Evaluar el subárbol derecho
+            if (!evaluarPrefijo(a1.getRightChild(), a2.getRightChild())) {
+                return false;
+            }
+        }
+        // Si todos los chequeos son satisfactorios, a1 es prefijo de a2
+        return true;
+    }
+}
+~~~
+
+</details>
+
+
+## 🔵 Punto 9
+
+Escribir en una clase ParcialArboles el método público con la siguiente firma:
+
+~~~java
+public BinaryTree<?> sumAndDif(BinaryTree<Integer> arbol)
+~~~
+
+El método recibe un árbol binario de enteros y devuelve un nuevo árbol que contenga en cada nodo dos tipos de información:
+
+* La suma de los números a lo largo del camino desde la raíz hasta el nodo actual.
+
+* La diferencia entre el número almacenado en el nodo original y el número almacenado en el nodo padre.
+
+Nota: En el nodo raíz considere que el valor del nodo padre es 0.
+
+![imagenSumAndDif](/proyectoAyED/src/recursos/imagen05.png)
+
+
+<details><summary> <code> click para ver resolución 🖱 </code></summary><br>
+
+ParcialArboles.java
+
+~~~java
+package practica02.ejercicio9;
+import practica02.ejercicio1y2.BinaryTree;
+
+public class ParcialArboles {
+
+    public BinaryTree<SumaDiferencia> sumAndDif(BinaryTree<Integer> arbol) {
+        BinaryTree<SumaDiferencia> arbolN = new BinaryTree<SumaDiferencia>();
+        if (!arbol.isEmpty())
+            evaluar(arbol, arbolN, 0, 0);
+        return arbolN;
+    }
+
+    private void evaluar(BinaryTree<Integer> a, BinaryTree<SumaDiferencia> aN, int sum,
+            int padre) {
+        int actual = a.getData();
+        SumaDiferencia aux = new SumaDiferencia(sum + a.getData(), a.getData() - padre);
+        aN.setData(aux);
+        if (a.hasLeftChild()) {
+            aN.addLeftChild(new BinaryTree<SumaDiferencia>());
+            evaluar(a.getLeftChild(), aN.getLeftChild(), sum + actual, actual);
+        }
+        if (a.hasRightChild()) {
+            aN.addRightChild(new BinaryTree<SumaDiferencia>());
+            evaluar(a.getRightChild(), aN.getRightChild(), sum + actual, actual);
+        }
+    }
+}
+~~~
+
+SumaDiferencia.java
+
+~~~java
+package practica02.ejercicio9;
+
+public class SumaDiferencia {
+
+    private int suma;
+    private int dif;
+
+    public SumaDiferencia(int s, int d) {
+        suma = s;
+        dif = d;
+    }
+
+    public int getSuma() {
+        return suma;
+    }
+
+    public int getDif() {
+        return dif;
+    }
+
+    public void setSuma(int s) {
+        this.suma = s;
+    }
+
+    public void setDif(int d) {
+        this.dif = d;
+    }
+
+    public String toString() {
+        return "Suma: " + suma + " Diferencia: " + dif;
+    }
+}
+~~~
+
+</details>
+
+
