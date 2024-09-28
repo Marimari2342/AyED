@@ -465,3 +465,39 @@ public class Transformacion {
 ~~~
 
 </details>
+
+------------------------
+
+**Los siguientes ejercicios fueron tomados en parciales, en los últimos años. Tenga en cuenta que:**
+
+* **1. No puede agregar más variables de instancia ni de clase a la clase ParcialArboles.**
+
+* **2. Debe respetar la clase y la firma del método indicado.**
+
+* **3. Puede definir todos los métodos y variables locales que considere necesarios.**
+
+* **4. Todo método que no esté definido en la sinopsis de clases debe ser implementado.**
+
+* **5. Debe recorrer la estructura solo 1 vez para resolverlo.**
+
+* **6. Si corresponde, complete en la firma del método el tipo de datos indicado con signo de “?”.**
+
+------------------------
+
+## 🔵 Punto 7
+
+Escribir en una clase ParcialArboles que contenga UNA ÚNICA variable de instancia de tipo BinaryTree de valores enteros NO repetidos y el método público con la siguiente firma:
+
+~~~java
+public boolean isLeftTree (int num)
+~~~
+
+El método devuelve true si el subárbol cuya raíz es “num”, tiene en su subárbol izquierdo una cantidad mayor estricta de árboles con un único hijo que en su subárbol derecho. Y false en caso contrario. Consideraciones:
+
+* Si “num” no se encuentra en el árbol, devuelve false.
+
+*  Si el árbol con raíz “num” no cuenta con una de sus ramas, considere que en esa rama hay -1 árboles con único hijo.
+
+Por ejemplo, con un árbol como se muestra en la siguiente imagen:
+
+![imagen](/proyectoAyED/src/recursos/imagen03.png)
