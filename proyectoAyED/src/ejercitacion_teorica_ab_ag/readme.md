@@ -239,7 +239,15 @@ Suponiendo que con el arbol armamos una expresión postfija la respuesta correct
 
 ¿Cuál es el número mínimo de nodos en un árbol binario completo de altura 4? 
 
-(a) 10      (b) 15      (c) 12      (d) 31      **(e) 16** ✔️
+(a) 10      
+
+(b) 15      
+
+(c) 12      
+
+(d) 31      
+
+**(e) 16** ✔️
 
 <details><summary> <code> click para ver resolución 🖱 </code></summary><br>
 
