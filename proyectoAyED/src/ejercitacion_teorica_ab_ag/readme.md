@@ -83,12 +83,20 @@ Suponga que para un árbol binario T con N nodos (N>1), el último nodo en posto
 
 (a) El subárbol izquierdo de T es vacío
 
-(b) El subárbol derecho de T es vacío
+**(b) El subárbol derecho de T es vacío** ✔️
 
 (c) Ningún nodo en el árbol tiene dos hijos
 
 (d) Hay a lo sumo 3 nodos en el árbol
 
 <details><summary> <code> click para ver resolución 🖱 </code></summary><br>
+
+Sabemos que 
+
+* postOrden = (subAIz)(subADr)(X)
+
+* inOrden = (subAIz)(X)(subADr) 
+
+Si el último nodo en postOrden e inOrden es el mismo (X) podemos concluir que el subArbol derecho de T es vacio.
 
 </details>
