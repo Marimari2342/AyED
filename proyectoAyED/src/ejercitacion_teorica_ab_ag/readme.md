@@ -638,7 +638,7 @@ Por lo tanto, los nodos internos en el árbol dado son 31.
 
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
 
-Sea un arbol general completo de altura h y grado k, la cantidad de nodos (n) del arbol cumplo
+Sea un arbol general completo de altura h y grado k, la cantidad de nodos (n) del arbol cumple:
 
 ~~~
 (k ^ h + k - 2 ) / ( k - 1 ) <= n <= (k ^ ( h + 1 ) – 1 ) / ( k - 1 )
