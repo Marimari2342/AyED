@@ -560,7 +560,7 @@ a) ¿Cuál es la altura del árbol?
 
 b) Desarrolle el proceso realizado para obtener la respuesta anterior.
 
-<details><summary> <code> Respuesta 🖱 </code></summary><br>
+<details><summary> <code> click para ver resolución 🖱 </code></summary><br>
 
 Sabemos que un arbol lleno de grado k y altura h cumple que la cantidad de nodos es:
 
@@ -588,6 +588,22 @@ Por lo tanto, la altura del arbol es h = 2.
 
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
 
+Sabemos que un arbol general completo de altura h y grado k, cumple que la cantidad de nodos (n) es:
+
+~~~
+(k ^ h + k - 2 ) / ( k - 1 ) <= n <= (k ^ ( h + 1 ) – 1 ) / ( k - 1 )
+~~~
+
+Si queremos saber la cantidad mínima de nodos de un arbol general completo de grado 3 y altura 4 hacemos:
+
+~~~
+n = ( k ^ h + k - 2 ) / ( k - 1 )
+n = ( 3 ^ 4 + 3 - 2 ) / ( 3 - 1 )
+n = ( 81 + 1 ) / 2
+n = 82 / 2
+n = 41 
+~~~
+
 </details>
 
 ## 🔵 Punto 21
@@ -600,6 +616,20 @@ b) Desarrolle el proceso realizado para obtener la respuesta anterior.
 
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
 
+Sabemos que un arbol lleno de grado k y altura h cumple que la cantidad de nodos es:
+
+* n = (k ^ ( h + 1 ) – 1 ) / ( k - 1 )
+
+Si el arbol es de grado 5 y tiene 125 hojas, esto significa que en el último nivel tenemos:
+
+(5)(5)(5)....(5) = 125 = 5 ^ n (donde n = nivel). Entonces tenemos 5 niveles en nuestro arbol, pues 5 ^ 3 = 125. 
+
+Para saber la cantidad de nodos internos del arbol entonces sumanos todos los nodos de los niveles anteriores, que será:
+
+x = 5 ^ 2 + 5 ^ 1 + 5 ^ 0 = 25 + 5 + 1 = 31
+
+Por lo tanto, los nodos internos en el árbol dado son 31.
+
 </details>
 
 ## 🔵 Punto 22
@@ -607,5 +637,22 @@ b) Desarrolle el proceso realizado para obtener la respuesta anterior.
 ¿Cuál es la cantidad de nodos en un árbol general COMPLETO de grado 4 y altura 3?
 
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+Sea un arbol general completo de altura h y grado k, la cantidad de nodos (n) del arbol cumplo
+
+~~~
+(k ^ h + k - 2 ) / ( k - 1 ) <= n <= (k ^ ( h + 1 ) – 1 ) / ( k - 1 )
+~~~
+
+En el caso en que el grado k = 4 y la altura h = 3, se cumple:
+
+~~~
+( 4 ^ 3 + 4 - 2 ) / ( 4 - 1 ) <= n <= (4 ^ ( 3 + 1 ) – 1 ) / ( 4 - 1 )
+( 64 + 2 ) / 3 <= n <= ( 256 - 1) / 3
+66 / 3 <= n <= ( 255 ) / 3
+22 <= n <= 85
+~~~
+
+Por lo tanto, la respuesta correcta es que la cantidad de nodos será entre 22 y 85, para el arbol dado. 
 
 </details>
