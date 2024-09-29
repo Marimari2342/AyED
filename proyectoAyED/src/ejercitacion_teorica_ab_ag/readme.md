@@ -622,7 +622,7 @@ Sabemos que un arbol lleno de grado k y altura h cumple que la cantidad de nodos
 
 Si el arbol es de grado 5 y tiene 125 hojas, esto significa que en el último nivel tenemos:
 
-(5)(5)(5)....(5) = 125 = 5 ^ n (donde n = nivel). Entonces tenemos 5 niveles en nuestro arbol, pues 5 ^ 3 = 125. 
+(5)(5)(5)....(5) = 125 = 5 ^ n (donde n = nivel). Entonces tenemos 3 niveles en nuestro arbol, pues 5 ^ 3 = 125. 
 
 Para saber la cantidad de nodos internos del arbol entonces sumanos todos los nodos de los niveles anteriores, que será:
 
