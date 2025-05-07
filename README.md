@@ -16,6 +16,8 @@
 >Ver la Modalidad de Aprobación➡️[<code>**AQUÍ**</code>](https://drive.google.com/file/d/1dqkMP_lXXalliV3bxUp1sLM612Y9dsj1/view?usp=sharing)
 >
 >Link al Tutorial Eclipse➡️[<code>**AQUÍ**</code>](https://drive.google.com/file/d/1CXsoW3KZewtLtZTrjSDyioAjNr6qrzGz/view?usp=sharing)
+>
+>Link al Resoluciones Parcial AB y AG➡️[<code>**AQUÍ**</code>](https://github.com/Marimari2342/AyED/tree/main/proyectoAyED/src/examenes)
 
 <br>
 <br>
