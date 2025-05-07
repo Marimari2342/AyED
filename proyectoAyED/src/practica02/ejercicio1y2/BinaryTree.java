@@ -103,17 +103,17 @@ public class BinaryTree <T> {
 		return this.getData().toString();
 	}
 
-	/*contarHojas():int Devuelve la cantidad de árbol/subárbol hojas del árbol 
-	receptor. */
+	/*PUNTO 2 --> contarHojas():int Devuelve la cantidad de árbol/subárbol hojas 
+	del árbol receptor. */
 	public int contarHojas() {
 		int hojas_izq = 0;
 		int hojas_der = 0;
 		if (this.isEmpty()){
 			return 0; //condicion de corte 
-		}else if (this.isLeaf()){
+		}else if (this.isLeaf()){ //nos indica que no tiene hijos (es una hoja)
 			return 1; //es una hoja
-		}else {
-			if (this.hasLeftChild()){
+		}else { //sino es una hoja bajo a los hijos
+			if (this.hasLeftChild()){ 
 				hojas_izq = this.getLeftChild().contarHojas();
 			}
 			if (this.hasRightChild()){
@@ -124,23 +124,24 @@ public class BinaryTree <T> {
 	}
 		
 		
-    /*espejo(): BinaryTree<T> Devuelve el árbol binario espejo del árbol receptor.*/ 
+    /*PUNTO 2 --> espejo(): BinaryTree<T> Devuelve el árbol binario espejo del árbol receptor.*/ 
     public BinaryTree<T> espejo(){
 		/*Usamos el constructor BinaryTree(T data) para inicializar aux con el dato 
 		de la raíz del árbol original.*/
 		BinaryTree<T> aux = new BinaryTree(this.getData());
 		
 		/*Invertimos los hijos*/
+		//si el arbol original tiene hD o hI, lo reflejamos en el arbol espejo
 		if (this.hasLeftChild()){
-			aux.addRightChild(aux.getLeftChild().espejo());
+			aux.addRightChild(this.getLeftChild().espejo());
 		}       		  
 		if (this.hasRightChild()){
-			aux.addLeftChild(aux.getRightChild().espejo());
+			aux.addLeftChild(this.getRightChild().espejo());
 		}
  	   return aux;
     }
 
-	/*entreNiveles(int n, m) Imprime el recorrido por niveles de los elementos del 
+	/*PUNTO 2 --> entreNiveles(int n, m) Imprime el recorrido por niveles de los elementos del 
 	árbol receptor entre los niveles n y m (ambos inclusive). (0 ≤ n < m ≤ altura del 
 	árbol).*/
 	public void entreNiveles(int n, int m){
