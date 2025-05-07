@@ -2,28 +2,55 @@ package examenes;
 
 public class ParcialArboles {
 
-    public ArbolBinario<ArbolSyD> sumAndDif(ArbolBinario<Integer> arbol) {
-        if (arbol.isEmpty()) {
-            return new ArbolBinario<ArbolSyD>();
+    //METODO que recibe un AB de enteros y devuelve un nuevo arbol en donde en cada nodo tengo
+    //Suma--> de todos los números a lo largo del camino (desde raiz hasta nodo actual)
+    //Diferencia--> nodo original - nodo padre
+    public BinaryTree<SumaDif> sumaAndDif(BinaryTree<Integer>arbol){
+        //Si el arbol esta vacio, devuelvo otro arbol vacio
+        if(arbol.isEmpty()){
+            return new BinaryTree<SumDif>();
         }
-        return construir(arbol, 0, 0);
+        //sino construyo un nuevo arbol
+        return construir(arbol, 0,0);
     }
 
-    private ArbolBinario<ArbolSyD> SumaDifConstruir(ArbolBinario<Integer> nodo, int suma, int valorPadre) {
-        //Recorrido PREORDEN (Raiz, hI, hD)
-        if (nodo.isEmpty()) {
+    //CONSTRUIR --> metodo para construir mi arbol 
+    private BinaryTree<SumaDif> construir(BinaryTree<Integer>arbol, int suma, int padre){
+        //PREORDEN (raiz, hI, hD)
+        //Si llegamos al final (nodo vacio) retornamos null
+        if (arbol.isEmpty()){
             return null;
         }
+        // me guardo la suma del camino que fui recorriendo mas el valor del nodo
+        int sumN=suma+arbol.getData();
+        // me guardo la diferencia --> nodoactual-padre (pasado como parametro)
+        int difN=arbol.getData()-padre;
 
-        int nuevaSuma = suma + nodo.getData();
-        int diferencia = nodo.getData() - valorPadre;
+        //creo una clase SumDif y luego creo un arbol que guarde este dato de tipo SumDif
+        SumDif dato = new SumDif(sumN,difN);
+        BinaryTree<SumDif> nodo = new BinaryTree<SumDif>(dato); 
 
-        ArbolSyD aux = new ArbolSyD(nuevaSuma, diferencia);
-        ArbolBinario<ArbolSyD> nuevoNodo = new ArbolBinario<ArbolSyD>(aux);
-
-        nuevoNodo.setHijoIzquierdo(construir(nodo.getHijoIzquierdo(), nuevaSuma, nodo.getDato()));
-        nuevoNodo.setHijoDerecho(construir(nodo.getHijoDerecho(), nuevaSuma, nodo.getDato()));
-
-        return nuevoNodo;
+        //continuo construyendo el arbol con los hijos
+        if (arbol.hasLeftChild()){
+            nodo.addLeftChild(construir(arbol.getLeftChild(),sumN, arbol.getData()));
+        }
+        if (arbol.hasRightChild()){
+            nodo.addRightChild(construir(arbol.getRightChild(),sumN, arbol.getData()));
+        }
+        return nodo;
     }
 }
+
+/* CLASE AUXILIAR (el AB que devuelve el método sumAndDif() guardara datos de tipo SumaDif)
+ * public class SumaDif{
+ *  //variables instancia
+ *  private int suma;
+ *  private int dif;
+ * 
+ *  //constructor
+ *  public SumaDif(int sum, int dif){
+ *      this.suma=sum;
+ *      this.dif=dif;
+ *  }
+ * }
+ */
