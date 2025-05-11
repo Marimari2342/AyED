@@ -100,6 +100,7 @@ public class RecorridosAG {
                     queue.enqueue(child);
                 }
             }
+            nivel++;
         }
     }
 }
