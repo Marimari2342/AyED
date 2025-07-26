@@ -11,6 +11,7 @@ al mismo tiempo sin importar la cantidad.*/
 package tp5.ejemplos;
 
 import java.util.Queue;
+import java.util.LinkedList;
 import tp5.ejercicio1.Graph;
 import tp5.ejercicio1.Vertex;
 import tp5.ejercicio1.Edge;
@@ -19,7 +20,7 @@ public class Infeccion {
     public static int tiempoInfeccion(Graph<String>grafo, Vertex<String>inicial){
         int tiempo = 0;//inicializo el tiempo de infección
         boolean [] marca = new boolean[grafo.getSize()]; //marco los vertices visitados
-        Queue<Vertex<String>> cola = new Queue<Vertex<String>>(); //creo la cola
+        Queue<Vertex<String>> cola = new LinkedList<Vertex<String>>(); //creo la cola
         cola.enqueue(inicial); //agrego el vertice inicial a la cola
         cola.enqueue(null); //agrego un null para marcar el final de un nivel
         marca[inicial.getPosition()] = true; //marco el vertice inicial como visitado
@@ -41,8 +42,5 @@ public class Infeccion {
             }
         }
         return tiempo; //retorno el tiempo de infección
-    }
-
-
-    
+    }  
 }
