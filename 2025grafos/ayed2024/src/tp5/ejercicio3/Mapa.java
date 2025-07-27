@@ -139,12 +139,89 @@ public class Mapa {
     /*(4)Retorna la lista de ciudades que forman un camino para llegar de ciudad1 a 
     ciudad2. El auto no debe quedarse sin combustible y no puede cargar. Si no 
     existe camino retorna la lista vacía.*/
-    //public List<String> caminoSinCargarCombustible(String ciudad1, String ciudad2, int tanqueAuto){}
+    public List<String> caminoSinCargarCombustible(String ciudad1, String ciudad2, int tanqueAuto){
+        boolean marca[]=new boolean[mapaCiudades.getSize()]; //vector para marcar vertices visitados
+        List<String>camino=new ArrayList<>(); //Lista que voy a retornar
+        if (!this.mapaCiudades.isEmpty()) { //si el grafo no esta vacio 
+            Vertex<String> ciudadInicio = mapaCiudades.search(ciudad1); //busco la ciudad de inicio
+            Vertex<String> ciudadDestino = mapaCiudades.search(ciudad2); //busco la ciudad de destino
+            if (ciudadInicio!=null && ciudadDestino!=null) { //si las ciudades existen
+                dfsSinCargarCombustible(ciudadInicio, ciudadDestino, marca, camino, tanqueAuto); // llamo a la funcion dfs
+            }
+        }
+        return camino;
+    }
+
+    private boolean dfsSinCargarCombustible(Vertex<String> cI, Vertex<String> cD, boolean []marca, List<String>camino, int tanqueAuto){
+        boolean encontre = false; //variable para saber si encontre el camino
+        marca[cI.getPosition()] =true; //marco la ciudad de inicio como visitada
+        camino.add(cI.getData()); //agrego el nombre de la ciudad a la lista camino
+        //Condicion de corte
+        if (cI == cD){ //si llegue a la ciudad de destino
+            return true; //retorno
+        }
+        else{
+            List<Edge<String>> adyacentes = mapaCiudades.getEdges(cI); //obtengo adyacentes de ciudad de inicio
+            for (Edge<String> ady: adyacentes) { //recorro los adyacentes
+                Vertex<String> ciudadAdyacente = ady.getTarget(); //obtengo la ciudad adyacente
+                int distancia = ady.getWeight(); //obtengo la distancia de la ruta
+                if (!marca[ciudadAdyacente.getPosition()] && distancia <= tanqueAuto){ //si no visite la ciudad adyacente y la distancia es menor o igual al tanque de combustible
+                    encontre = dfsSinCargarCombustible(ciudadAdyacente, cD, marca, camino, tanqueAuto - distancia); //llamo a la funcion recursiva
+                    if (encontre) return true; // si encontré, corto
+                }
+            }
+        }
+        if(!encontre) {
+            camino.remove(camino.size()-1); //Si no encontré un camino hacia el destino desde este vértice (origen), deshago la última ciudad agregada al camino.
+        }
+        marca[cI.getPosition()] = false; //Desmarco la ciudad de inicio antes de retornar
+        return encontre;
+    }
     
     /*(5)Retorna la lista de ciudades que forman un camino para llegar de ciudad1 a 
     ciudad2 teniendo en cuenta que el auto debe cargar la menor cantidad de veces. 
     El auto no se debe quedar sin combustible en medio de una ruta, además puede 
     completar su tanque al llegar a cualquier ciudad. Si no existe camino retorna la
     lista vacía.*/
-    //public List<String> caminoConMenorCargaDeCombustible (String ciudad1, String ciudad2, int tanqueAuto){}
+    public List<String> caminoConMenorCargaDeCombustible (String ciudad1, String ciudad2, int tanqueAuto){
+        boolean marca[]=new boolean[mapaCiudades.getSize()]; //vector para marcar vertices visitados
+        List<String>camino=new ArrayList<>(); //Lista camino auxiliar
+        List<String> caminoMin = new ArrayList<>(); //Lista camino minimo (retorno este)
+        if (!this.mapaCiudades.isEmpty()) { //si el grafo no esta vacio 
+            Vertex<String> ciudadInicio = mapaCiudades.search(ciudad1); //busco la ciudad de inicio
+            Vertex<String> ciudadDestino = mapaCiudades.search(ciudad2); //busco la ciudad de destino
+            if (ciudadInicio!=null && ciudadDestino!=null) { //si las ciudades existen
+                dfsCargaCombustible(ciudadInicio, ciudadDestino, marca, camino,caminoMin,tanqueAuto,tanqueAuto,0,Integer.MAX_VALUE); // llamo a la funcion dfs
+            }
+        }
+        return caminoMin; //retorno el camino minimo
+    }
+
+    private int dfsCargaCombustible(Vertex<String>cI, Vertex<String>cD, boolean[]marca, List<String>caminoAct, List<String>caminoMin, int tanqueLleno, int tanqueActual, int cantRecargas, int minRecargas){
+        marca[cI.getPosition()] =true; //marco la ciudad de inicio como visitada
+        caminoAct.add(cI.getData()); //agrego el nombre de la ciudad a la lista caminoAct
+        //Condicion de corte
+        if (cI == cD && cantRecargas < minRecargas){ //si llegue a la ciudad de destino
+            caminoMin.removeAll(caminoMin); //elimino el camino minimo actual
+            caminoMin.addAll(caminoAct); //nuevo camino minimo --> camino actual  
+            minRecargas = cantRecargas; //actualizo el minimo de recargas
+        }
+        else{
+            List<Edge<String>> adyacentes = mapaCiudades.getEdges(cI); //adyacentes de ciudad inicio
+            for (Edge<String>ady:adyacentes){ //recorro adyacentes
+                Vertex<String> ciudadAdy=ady.getTarget(); //obtengo la ciudad adyacente
+                int distancia = ady.getWeight(); //obtengo la distancia
+                if (!marca[ciudadAdy.getPosition()] && distancia <= tanqueActual) { //si no visite la ciudad adyacente y la distancia es menor o igual al tanque actual
+                    minRecargas=dfsCargaCombustible(ciudadAdy, cD, marca, caminoAct, caminoMin, tanqueLleno, tanqueActual - distancia, cantRecargas, minRecargas);
+                }
+                else if (!marca[ciudadAdy.getPosition()] && distancia <= tanqueLleno){ //si no me alcanza con el combustible actual pero puedo llenar el tanque
+                    //llamo a la funcion recursiva, recargando el tanque
+                    minRecargas=dfsCargaCombustible(ciudadAdy, cD, marca, caminoAct, caminoMin, tanqueLleno, tanqueLleno - distancia, cantRecargas + 1, minRecargas);
+                }
+            }
+        }
+        caminoAct.remove(caminoAct.size() - 1); //elimino la ciudad actual del camino
+        marca[cI.getPosition()] = false; //Desmarco la ciudad de inicio antes de retornar
+        return minRecargas;
+    }
 }
