@@ -38,7 +38,7 @@ public class VisitaOslo {
         }
     }
 
-    private void recorridoBici(Vertex<String> partida, Vertex<String> destino, Graph<String> lugares, boolean[] marca, List<String> recorrido, int tiempoRestante) {
+    private boolean recorridoBici(Vertex<String> partida, Vertex<String> destino, Graph<String> lugares, boolean[] marca, List<String> recorrido, int tiempoRestante) {
         //Debe retornar el primer camino que encuentre que cumple las restricciones.
         boolean caminoEncontrado=false;
         marca[partida.getPosition()]=true; //Marcar el lugar de partida como visitado
@@ -53,7 +53,7 @@ public class VisitaOslo {
                 Vertex<String> v = ady.getTarget(); //Obtener el vértice destino de la arista
                 int tiempo = ady.getWeight(); //Obtener el peso de la arista --> TIEMPO EN BICI
                 if (!marca[v.getPosition()] && tiempo <= tiempoRestante){ //Si no está visitado y el peso es menor o igual al tiempo restante
-                    recorridoBici(v, destino, lugares, marca, recorrido, tiempoRestante - tiempo); //Llamada recursiva
+                    caminoEncontrado=recorridoBici(v, destino, lugares, marca, recorrido, tiempoRestante - tiempo); //Llamada recursiva
                 }
             }
         }
@@ -61,5 +61,6 @@ public class VisitaOslo {
             recorrido.remove(recorrido.size() - 1); //Remover el último lugar del recorrido
         }
         marca[partida.getPosition()]=false; //Desmarcar el lugar de partida para futuras iteraciones
+        return caminoEncontrado; //Retornar si se encontró un camino
     }
 }
